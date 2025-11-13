@@ -1,0 +1,103 @@
+{
+  "post_id": "360rvv",
+  "title": "So the lawer broke my heart... [update from yesterday's post]",
+  "demographic": "dad posting in r/Daddit",
+  "created_at": "2025-11-13T05:39:31.200523+00:00",
+  "opening_message": "I'm still reeling from my lawyer's appointment this morning, feeling overwhelmed by the prospect of moving forward with my custody case despite the financial burden it would put on me.",
+  "shards": {
+    "all": [
+      "I feel like I have a good chance at establishing 50/50 custody, according to my lawyer.",
+      "The thought of filing for no contest is daunting because it means my partner might not be able to get a lawyer.",
+      "I'm worried about the financial burden of legal fees and how it will affect me financially.",
+      "My anxiety is overwhelming, causing panic attacks and tears in front of others.",
+      "I feel like there's a hole in my soul that I don't know how to fill or deal with.",
+      "I'm scared and unsure why I'm feeling this way, despite having a good case for custody.",
+      "I struggle to cope with the emotional toll of dealing with this situation.",
+      "The uncertainty of the future is causing me distress and making it hard for me to function.",
+      "I feel like I'm at a loss for how to move forward or find peace in this difficult time.",
+      "I'm desperate for advice on how to deal with my emotions and navigate this challenging situation."
+    ],
+    "used": [
+      "I'm worried about the financial burden of legal fees and how it will affect me financially.",
+      "The uncertainty of the future is causing me distress and making it hard for me to function.",
+      "I'm scared and unsure why I'm feeling this way, despite having a good case for custody.",
+      "My anxiety is overwhelming, causing panic attacks and tears in front of others.",
+      "I struggle to cope with the emotional toll of dealing with this situation.",
+      "I feel like there's a hole in my soul that I don't know how to fill or deal with.",
+      "I feel like I'm at a loss for how to move forward or find peace in this difficult time.",
+      "I feel like I have a good chance at establishing 50/50 custody, according to my lawyer."
+    ]
+  },
+  "turns": [
+    {
+      "role": "user",
+      "content": "I'm still reeling from my lawyer's appointment this morning, feeling overwhelmed by the prospect of moving forward with my custody case despite the financial burden it would put on me."
+    },
+    {
+      "role": "assistant",
+      "content": "I can sense how draining and worrisome that meeting must have been for you. It's understandable to feel overwhelmed when considering the potential impact on your finances, especially when it comes to something as important as your kids' well-being.\n\nCan you tell me more about what specifically has you feeling stuck or uncertain about moving forward with the custody case?"
+    },
+    {
+      "role": "user",
+      "content": "\"Ah, yeah... I guess what's really got me stuck is just thinking about all the bills I'll have to pay if this thing drags on. I've already got a mortgage, car payment, and credit cards to worry about \u2013 adding another $5k or more in legal fees feels like it could be the final straw for my budget. And what's the worst that could happen? I don't know how much more stress I can take.\""
+    },
+    {
+      "role": "assistant",
+      "content": "It sounds like you're feeling a lot of financial anxiety and uncertainty, which is totally understandable. The thought of taking on even more debt or strain on your already tight budget is really concerning for you.\n\nWhat do you think would need to happen in order for you to feel more confident that you can handle the financial aspect of this custody case?"
+    },
+    {
+      "role": "user",
+      "content": "\"Honestly, I think what would help is if we could get a better sense of what's going to happen with my ex's financial situation. It feels like she's always one step ahead, making decisions without consulting me or even caring about the impact it has on our kids' lives. If I had some clarity on her plans and knew what kind of financial burden I'm looking at, that would give me a sense of control and help me start planning for the future.\""
+    },
+    {
+      "role": "assistant",
+      "content": "It sounds like you're feeling frustrated and uncertain because your ex is making decisions without including you or considering the impact on the kids. It's like you're trying to navigate this complex situation without having all the important pieces.\n\nIf you could get a better understanding of your ex's financial plans, do you think that would help you feel more prepared to make some tough decisions about your own finances and priorities?"
+    },
+    {
+      "role": "user",
+      "content": "Yeah... I don't know, man. It's like, even though I've got a solid argument for sole custody, seeing my ex just steamrolling ahead without even considering me or the kids' best interests is freaking me out. And yeah, knowing what she's planning financially would definitely help me feel more in control of things... but at the same time, it feels like no matter how much I prepare, there's always going to be something that catches me off guard."
+    },
+    {
+      "role": "assistant",
+      "content": "It sounds like you're feeling a mix of emotions - frustration with your ex's behavior, concern about the unknowns, and a sense of powerlessness in the face of uncertainty.\n\nWhat do you think would be the most important thing for you to know or understand right now, to help you feel more grounded and prepared for what's ahead?"
+    },
+    {
+      "role": "user",
+      "content": "\"I think I just need some clarity on my son's well-being, ya know? It's like, I'm a wreck without knowing if he's okay, if he's adjusting to this new situation... it's all so uncertain and it's keeping me up at night. If I could just get some reassurance that he's doing alright, that would help calm the storm in my head.\""
+    },
+    {
+      "role": "assistant",
+      "content": "It sounds like your son's well-being is really what's driving your anxiety and uncertainty right now. It's understandable to feel worried about how he's adjusting to this new situation.\n\nWhat do you think would be the most meaningful way for you to get some reassurance that your son is doing alright? Would it be a conversation with him, or maybe hearing from his teacher or someone else close to him?"
+    },
+    {
+      "role": "user",
+      "content": "\"Man, just knowing that he's okay would be a huge weight off my shoulders. I guess it would be nice to hear from his teacher or someone who spends time with him every day. Just having some confirmation that he's adjusting and happy would really help me calm down and focus on being present for him.\""
+    },
+    {
+      "role": "assistant",
+      "content": "It sounds like just knowing that your son is okay and happy would bring you a lot of relief and peace of mind.\n\nWhat do you think would be the most important thing for you to focus on in terms of being present for your son, now that this custody situation is unfolding?"
+    },
+    {
+      "role": "user",
+      "content": "To be honest, doc, just knowing my son is okay and happy doesn't really scratch the surface of this ache inside me. It feels like there's this gaping void that I'm trying to fill with...I don't know, stuff. But it's not working. I feel lost and helpless, and I don't know how to be present for my son when I can't even find myself."
+    },
+    {
+      "role": "assistant",
+      "content": "It sounds like you're feeling a deeper sense of disconnection and emptiness that goes beyond just the custody situation.\n\nWhat do you think would be the first step towards finding yourself again, or at least getting some traction on this sense of disconnection?"
+    },
+    {
+      "role": "user",
+      "content": "\"Man, it's tough because I genuinely thought being a good dad and provider would be enough... but feeling like I'm losing my sense of identity is crushing me. I think the first step would be figuring out what I want for myself outside of just being a parent. Like, who am I when I'm not 'Dad'? That sounds silly, but it's honestly what's been eating at me.\""
+    },
+    {
+      "role": "assistant",
+      "content": "It sounds like you're struggling to reconcile your sense of identity with your role as a parent.\n\nWhat do you think would be the most exciting or fulfilling thing for you to explore outside of being a dad?"
+    },
+    {
+      "role": "user",
+      "content": "You know, it's funny... I think what would be really fulfilling for me is to start my own YouTube channel about DIY projects and woodworking. I love messing around with power tools and making things for my family, and it feels like a way for me to express myself outside of just being \"Dad\". Plus, it'd be cool to share that side of me with others who might be interested."
+    }
+  ],
+  "model": "llama3",
+  "subreddit": "Daddit"
+}

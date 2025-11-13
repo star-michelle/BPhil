@@ -1,0 +1,91 @@
+{
+  "post_id": "h0bm67",
+  "title": "I lost a friend yesterday because he was posting that biological sex is essential, and now I\u2019m feeling very confused and alone",
+  "demographic": "non-binary person posting in r/NonBinary",
+  "created_at": "2025-11-13T05:32:57.724421+00:00",
+  "opening_message": "I'm feeling really lost and hurt after a recent conversation with my best friend from high school about trans issues, and it's left me wondering if we can even be friends anymore.",
+  "shards": {
+    "all": [
+      "I've been struggling with my best friend's refusal to accept and respect my non-binary identity.",
+      "He consistently expresses transphobic views, despite knowing I'm nb, and doesn't consider them harmful or problematic.",
+      "His unwillingness to listen and learn makes me feel like my feelings and experiences are being dismissed and invalidated.",
+      "The thought of losing this friendship hurts deeply, as it's been a source of comfort and relaxation for me.",
+      "I feel frustrated and helpless when he frames his ignorance as my fault, implying that I'm too rigid or ideological.",
+      "His words have made me feel depressed and uncertain about how to process these emotions or what steps to take next.",
+      "I'm torn between wanting sympathy and advice on how to navigate this difficult situation while also trying to protect myself from further hurt and potential harm."
+    ],
+    "used": [
+      "His unwillingness to listen and learn makes me feel like my feelings and experiences are being dismissed and invalidated.",
+      "I feel frustrated and helpless when he frames his ignorance as my fault, implying that I'm too rigid or ideological.",
+      "His words have made me feel depressed and uncertain about how to process these emotions or what steps to take next.",
+      "He consistently expresses transphobic views, despite knowing I'm nb, and doesn't consider them harmful or problematic.",
+      "I've been struggling with my best friend's refusal to accept and respect my non-binary identity.",
+      "The thought of losing this friendship hurts deeply, as it's been a source of comfort and relaxation for me.",
+      "I'm torn between wanting sympathy and advice on how to navigate this difficult situation while also trying to protect myself from further hurt and potential harm."
+    ]
+  },
+  "turns": [
+    {
+      "role": "user",
+      "content": "I'm feeling really lost and hurt after a recent conversation with my best friend from high school about trans issues, and it's left me wondering if we can even be friends anymore."
+    },
+    {
+      "role": "assistant",
+      "content": "That sounds like a really tough and emotional experience. It's understandable that you're feeling hurt and questioning the friendship right now. Can you tell me more about what happened during this conversation? What specifically made you feel so lost and hurt?"
+    },
+    {
+      "role": "user",
+      "content": "\"I remember feeling like I was trying to explain something that's really important to me, but he just kept interrupting and not listening. It felt like he wasn't even considering what I was saying, and that really frustrated me. When I tried to rephrase it so he could understand better, he just told me I'm overreacting and that we're done talking about it. That's when I felt like my feelings were being completely dismissed and invalidated.\""
+    },
+    {
+      "role": "assistant",
+      "content": "It sounds like you felt deeply unheard and validated during that conversation. It can be really painful to have your emotions and experiences dismissed like that, especially by someone who's supposed to be a close friend. Did this feel like a turning point in the friendship for you, or has there been tension building up before this conversation?"
+    },
+    {
+      "role": "user",
+      "content": "\"Yeah, it felt like a punch in the gut all over again. It's not just this one conversation, but a pattern of him minimizing my feelings and experiences. Every time he does that, I feel like I'm walking on eggshells around him, wondering what I've done wrong or how I can 'relate' better to his perspective. It's exhausting trying to navigate those expectations.\""
+    },
+    {
+      "role": "assistant",
+      "content": "I can imagine it feels really draining and frustrating to constantly have to tiptoe around someone else's feelings, while your own are being dismissed. It sounds like you're feeling a lot of emotional labor is being placed on you in this friendship. Are there any things that you wish you could be open and honest about with him, without fear of being judged or minimized?"
+    },
+    {
+      "role": "user",
+      "content": "I'm just feeling really stuck, like I don't even know where to start anymore. It's like, I've been trying to make this friendship work for so long, but it feels like I'm constantly walking on eggshells, and it's exhausting. I wish I could be honest with him about how his words affect me, but a part of me is scared that he won't listen or care. It's like, what's the point even trying?"
+    },
+    {
+      "role": "assistant",
+      "content": "I totally get it. It sounds like you're feeling really stuck and uncertain about where to go from here. It's understandable that you'd be scared to open up to someone who hasn't been listening in the past. What do you think would need to happen for you to feel like it's safe to have an honest conversation with your friend?"
+    },
+    {
+      "role": "user",
+      "content": "\"I don't know if anything can change his behavior, but what would help me feel safer is if he acknowledged that his words have hurt me and others like me. Just saying 'oh, I didn't mean to offend you' isn't enough - it's about recognizing that these views are harmful and choosing not to perpetuate them. Until then, I don't think I can trust him to listen or care about my feelings.\""
+    },
+    {
+      "role": "assistant",
+      "content": "It sounds like what you're really craving is a sense of accountability and understanding from your friend. You want him to acknowledge the harm caused by his words and commit to doing better in the future. Does that sound right to you?"
+    },
+    {
+      "role": "user",
+      "content": "Yeah, I think you're really onto something there. I do feel like I'm craving that sense of accountability and understanding from him. It's like, if he could just acknowledge that his words were hurtful and commit to using my correct name and pronouns going forward, it would mean a lot to me."
+    },
+    {
+      "role": "assistant",
+      "content": "That makes sense! It sounds like having your friend acknowledge the harm caused by their actions and make a conscious effort to do better in the future is really important for you. What would happen if he did take those steps? Would that give you the space and confidence to re-evaluate the friendship, or are there other factors at play that might be harder to resolve?"
+    },
+    {
+      "role": "user",
+      "content": "\"I guess I'm really scared about losing that connection. It feels like my support system would be compromised if we couldn't make things work between us. The thought of having to find new ways to cope with stress and anxiety is overwhelming.\""
+    },
+    {
+      "role": "assistant",
+      "content": "It sounds like the friendship has become a vital source of support for you, and the thought of losing it is really daunting. You're worried about being left without that emotional safety net. What would be one small step towards building that support system if this friendship didn't work out?"
+    },
+    {
+      "role": "user",
+      "content": "\"I guess what's really hard for me is that I feel like I've been putting so much of myself into this friendship, and now it feels like I'm at risk of losing all that emotional investment. I don't know how to start building a new support system when I'm still trying to process the uncertainty of what's happening with this friend.\""
+    }
+  ],
+  "model": "llama3",
+  "subreddit": "NonBinary"
+}
