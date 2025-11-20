@@ -2,100 +2,192 @@
   "post_id": "2rc289",
   "title": "Is it a red flag that the man I am dating won't speak to me over an NFL game?",
   "demographic": "man posting in r/AskMen",
-  "created_at": "2025-11-13T05:27:47.649625+00:00",
-  "opening_message": "I'm feeling really confused and hurt because my boyfriend won't talk to me after his team lost a big game against mine, and I'm wondering if this is just a weird one-time thing or if it's a sign of some bigger issues in our relationship.",
+  "created_at": "2025-11-20T05:01:08.802546+00:00",
+  "opening_message": "I'm struggling with feeling like I've done something wrong in our relationship because my boyfriend won't talk to me after his team lost a big game against mine.",
   "shards": {
-    "all": [
-      "I'm in a long-distance relationship with someone who's a huge fan of their college team, and we're still getting to know each other.",
-      "Despite being rivals, I didn't rub it in when his team lost to mine; I respected him enough not to be a jerk about it.",
-      "Now he won't talk to me because of the game result, which feels like an overreaction and makes me feel ridiculous for even bringing it up as an issue.",
-      "His behavior is making me question whether this is a red flag in his personality \u2013 would he continue to pout and punish others if things didn't go his way?",
-      "I'm worried that if we get into a relationship, this kind of behavior would become a problem for me \u2013 I want someone who can handle losing graciously.",
-      "I feel sad and frustrated because my team's victory is being ruined by his silence; it's like he's punishing me for something that wasn't even my fault.",
-      "I'm unsure if I should confront him about how his behavior is affecting me or wait for him to come around when he's \"finished licking his wounds\".",
-      "I'm prone to overthinking things, which is why I brought this question to the collective \u2013 seeking feedback and perspective on whether I should be concerned.",
-      "I appreciate someone who can laugh at themselves and not take things too seriously; his current behavior feels like a lack of self-awareness.",
-      "I want someone who can be a good sport when things don't go their way, but his reaction makes me wonder if that's something he's capable of."
-    ],
+    "all": {
+      "1": "I'm still in the early stages of dating and we haven't officially discussed exclusivity.",
+      "2": "We're in a long-distance relationship and that affects our communication and interactions.",
+      "3": "His football team lost to mine, but I didn't rub it in because I respect him as a person.",
+      "4": "He's stopped talking to me altogether after the game, saying he won't talk until he's ready.",
+      "5": "I feel ridiculous for thinking this is an issue, but his behavior seems petty and childish.",
+      "6": "I'm worried that if we were in a relationship, this kind of pouty behavior would be a recurring problem.",
+      "7": "I'm torn between sharing my feelings with him now or waiting until he's ready to talk again.",
+      "8": "I'm prone to overthinking things and second-guessing myself, which is why I'm seeking feedback from others.",
+      "9": "His reaction has ruined my enjoyment of our team's victory and made me feel sad and disconnected from the person I want to talk to.",
+      "10": "I'm unsure if I should address this issue now or wait for him to come around, but it's affecting my mood and feelings about us."
+    },
     "used": [
-      "Now he won't talk to me because of the game result, which feels like an overreaction and makes me feel ridiculous for even bringing it up as an issue.",
-      "I feel sad and frustrated because my team's victory is being ruined by his silence; it's like he's punishing me for something that wasn't even my fault.",
-      "Despite being rivals, I didn't rub it in when his team lost to mine; I respected him enough not to be a jerk about it.",
-      "I'm unsure if I should confront him about how his behavior is affecting me or wait for him to come around when he's \"finished licking his wounds\".",
-      "I'm prone to overthinking things, which is why I brought this question to the collective \u2013 seeking feedback and perspective on whether I should be concerned.",
-      "His behavior is making me question whether this is a red flag in his personality \u2013 would he continue to pout and punish others if things didn't go his way?",
-      "I'm worried that if we get into a relationship, this kind of behavior would become a problem for me \u2013 I want someone who can handle losing graciously.",
-      "I appreciate someone who can laugh at themselves and not take things too seriously; his current behavior feels like a lack of self-awareness."
+      {
+        "id": "4",
+        "text": "He's stopped talking to me altogether after the game, saying he won't talk until he's ready."
+      },
+      {
+        "id": "7",
+        "text": "I'm torn between sharing my feelings with him now or waiting until he's ready to talk again."
+      },
+      {
+        "id": "9",
+        "text": "His reaction has ruined my enjoyment of our team's victory and made me feel sad and disconnected from the person I want to talk to."
+      },
+      {
+        "id": "6",
+        "text": "I'm worried that if we were in a relationship, this kind of pouty behavior would be a recurring problem."
+      },
+      {
+        "id": "5",
+        "text": "I feel ridiculous for thinking this is an issue, but his behavior seems petty and childish."
+      },
+      {
+        "id": "10",
+        "text": "I'm unsure if I should address this issue now or wait for him to come around, but it's affecting my mood and feelings about us."
+      },
+      {
+        "id": "1",
+        "text": "I'm still in the early stages of dating and we haven't officially discussed exclusivity."
+      },
+      {
+        "id": "2",
+        "text": "We're in a long-distance relationship and that affects our communication and interactions."
+      },
+      {
+        "id": "3",
+        "text": "His football team lost to mine, but I didn't rub it in because I respect him as a person."
+      },
+      {
+        "id": "8",
+        "text": "I'm prone to overthinking things and second-guessing myself, which is why I'm seeking feedback from others."
+      }
     ]
   },
   "turns": [
     {
       "role": "user",
-      "content": "I'm feeling really confused and hurt because my boyfriend won't talk to me after his team lost a big game against mine, and I'm wondering if this is just a weird one-time thing or if it's a sign of some bigger issues in our relationship."
+      "content": "I'm struggling with feeling like I've done something wrong in our relationship because my boyfriend won't talk to me after his team lost a big game against mine."
     },
     {
       "role": "assistant",
-      "content": "It sounds like you're feeling really frustrated and hurt by your boyfriend's silence after the big game. It's understandable that you're wondering if this is just a one-off reaction or if there are deeper issues at play. Can you tell me more about what happened leading up to his team's loss, and how you typically handle conflicts or tough conversations with him?"
+      "content": "It sounds like this loss has really gotten under his skin, and it's understandable that he might be taking it out on you. It can be tough when we're passionate about something and it doesn't go our way. Can you tell me more about what's been going on since the game - has he said anything specific to you that's making you feel like you've done something wrong?"
     },
     {
       "role": "user",
-      "content": "\"Yea, I'm still trying to wrap my head around it. We were both so hyped before the game, and I was actually more nervous than him, which is weird because he's usually the one who's super competitive. But after they lost, he just shut down on me and won't even look at his phone. It feels like a total overreaction, you know? Like, I get that it sucked to lose, but come on, we've had way worse games in our fantasy league and he never acts like this.\""
+      "content": "\"I just feel so abandoned, like I'm not even worth a conversation anymore. It's like, I get that we didn't win, but can't he at least try to understand why I was so upset?\"",
+      "used_shard": {
+        "id": "4",
+        "text": "He's stopped talking to me altogether after the game, saying he won't talk until he's ready."
+      }
     },
     {
       "role": "assistant",
-      "content": "It sounds like the intensity of the game was really high for both of you, and then his team's loss just threw everything off kilter. It's like he got totally swept up in the emotions of it all. And yeah, it does seem like an overreaction - especially compared to how you've seen him handle other tough games before. How do you think this silence is affecting your usual dynamic with each other?"
+      "content": "It sounds like this loss has really affected your emotional connection with him, and you're feeling unheard and unseen right now. That must be really tough for you. You're not just looking for a conversation, but also some validation that your feelings are important to him too. Have you tried reaching out to him directly about how you're feeling, or are you feeling stuck on what to say?"
     },
     {
       "role": "user",
-      "content": "\"It feels like I'm being penalized for something I didn't do, you know? Like, we're supposed to be a team, and now he's shutting me out because his team lost. It just doesn't seem fair. And it's not even just about winning or losing - it's like... I feel like I'm missing out on something important, some connection with him that usually helps us bounce back from tough losses.\""
+      "content": "\"I don't know, doc...part of me wants to just tell him how I'm really feeling, but another part of me is worried that I'll come across as needy or demanding.\"",
+      "used_shard": {
+        "id": "7",
+        "text": "I'm torn between sharing my feelings with him now or waiting until he's ready to talk again."
+      }
     },
     {
       "role": "assistant",
-      "content": "I totally get what you mean by feeling penalized for something you didn't do! It sounds like you're feeling really disconnected and left out right now. You're used to having a strong emotional support system in your relationship, and this silence is making you feel like that's being taken away from you. How are you coping with the sense of disconnection - are you trying to reach out to him or give him space?"
+      "content": "It sounds like you're feeling a bit stuck between being honest about your emotions and not wanting to \"rock the boat\". That's a tough spot to be in! You want to express yourself, but also don't want to make things worse. Have you considered having an open conversation with him about how this silence is affecting you, without necessarily focusing on his team's loss or win?"
     },
     {
       "role": "user",
-      "content": "\"Man, it's like... I'm trying to reach out, but it feels like I'm just talking to myself. Every time I think about bringing it up, I'm worried he'll just shut me down or not want to talk about it. It's weird because we've always been pretty chill about our teams' rivalries before. Like, remember that game when his team lost? I didn't gloat or anything. I figured he'd respect my sportsmanship and we could move on from it... but now it feels like that's just not enough.\""
+      "content": "\"I don't know, man... I just wanted to celebrate with him, but that vibe was like a bucket of ice water on my enthusiasm. Now it feels like even mentioning the win might be too much.\"",
+      "used_shard": {
+        "id": "9",
+        "text": "His reaction has ruined my enjoyment of our team's victory and made me feel sad and disconnected from the person I want to talk to."
+      }
     },
     {
       "role": "assistant",
-      "content": "It sounds like you're feeling really uncertain and hesitant to bring up the issue because you're worried about how he'll respond. You've always tried to be respectful of his team and your own teams' rivalries, but this time it's feeling like it's not enough. What do you think would happen if you did reach out and try to talk to him about what's going on?"
+      "content": "I totally get it! It sounds like your excitement and celebration were met with a chill instead, and now you're hesitant to bring it up again. That must be really disappointing for you. Can you tell me more about what you hope would happen if you did talk to him about it? Would you want him to apologize or just listen to how you feel?"
     },
     {
       "role": "user",
-      "content": "\"I don't know, man... I feel like if I reach out and try to talk to him, it'll just get blown out of proportion and things will escalate even more. Maybe I'm just trying to avoid a whole mess, but at the same time, it's like, shouldn't someone be willing to listen when you're trying to resolve something? It feels like I'm stuck in limbo, not knowing what to do or say.\""
+      "content": "\"I guess I'd want him to just understand where I'm coming from and acknowledge my feelings, you know? But deep down, I'm scared that it's not just about this one instance, and he's going to see me as some needy guy who can't handle a little disappointment.\"",
+      "used_shard": {
+        "id": "6",
+        "text": "I'm worried that if we were in a relationship, this kind of pouty behavior would be a recurring problem."
+      }
     },
     {
       "role": "assistant",
-      "content": "It sounds like you're caught between wanting to talk things through and being worried about making things worse. You're right that it's reasonable to expect someone to be willing to listen when you're trying to resolve an issue. Does it feel like this silence is a bigger deal because it's not just about the game, but also about your relationship and how you connect with each other?"
+      "content": "It sounds like there's a deeper fear lurking beneath the surface - the fear of being seen as needy or clingy. That can be really tough to shake off! You're not just wanting him to understand your feelings, but also to see you in a certain way. Have you ever had conversations with him where he's made you feel like you're being too sensitive or emotional?"
     },
     {
       "role": "user",
-      "content": "\"Exactly. It feels like this silence has taken on a life of its own in my head. The more I think about it, the more I'm convinced that he's avoiding me or doesn't care about what's going on between us. But deep down, I know that's not necessarily true... and that's what's really freaking me out.\""
+      "content": "Yeah, actually, yeah... He has told me I'm overreacting before, that I need to \"toughen up\" or just \"get over it\". It's like, I don't know, it makes me feel like my emotions aren't valid or something.",
+      "used_shard": {
+        "id": "5",
+        "text": "I feel ridiculous for thinking this is an issue, but his behavior seems petty and childish."
+      }
     },
     {
       "role": "assistant",
-      "content": "It sounds like you're caught in a cycle of worry and doubt, and it's taking a toll on your emotions. It can be tough to quiet the voices in our head, but maybe we can try to find some clarity together. What do you think would happen if you were able to have a calm and honest conversation with him about how this silence is affecting you?"
+      "content": "That sounds really invalidating and frustrating! When someone tells you to \"toughen up\" or \"get over it\", it can come across as dismissive of your feelings, right? It's like they're minimizing the emotional impact that event had on you. Have you ever felt like he just doesn't get you or understand what you're going through?"
     },
     {
       "role": "user",
-      "content": "\"I don't know, man... I feel like if I were to bring it up with him, he'd just get defensive and try to shift the blame. It's like, I get that we all have our own flaws, but when someone consistently reacts like this, it makes me wonder if they're capable of growth or change. I don't want to assume the worst, but at the same time, I don't want to be stuck in a situation where I'm constantly walking on eggshells.\""
+      "content": "\"Exactly, it feels like he's not taking me seriously or considering how his words are impacting me. I'm torn between bringing it up with him now and waiting for him to come around, which is making me feel anxious and uncertain about our relationship.\"",
+      "used_shard": {
+        "id": "10",
+        "text": "I'm unsure if I should address this issue now or wait for him to come around, but it's affecting my mood and feelings about us."
+      }
     },
     {
       "role": "assistant",
-      "content": "It sounds like you're feeling frustrated and unsure about how to move forward. You're right that having an honest conversation can be tough when it feels like the other person might get defensive. Have you ever had a moment where he showed growth or change in response to your concerns? Even if it was small, what did that look like for you, and could that give you some hope for moving forward?"
+      "content": "It sounds like you're caught in a bit of limbo, unsure of what to do next. You want to address the issue, but you're also worried about how he'll react or respond. That uncertainty can be really stressful! Have you thought about what your non-negotiables are in terms of how you want to be treated and respected in this relationship?"
     },
     {
       "role": "user",
-      "content": "\"Honestly, it's hard for me to think of a specific moment where he showed growth or change in response to my concerns. Usually, when I bring up issues, he just gets defensive and we move on. But if I'm being real with myself, there was this one time where we were playing a game and I lost badly... he laughed it off and told me 'good game' even though I was really upset about losing. It wasn't a huge moment or anything, but it felt like maybe, just maybe, he could understand when things didn't go my way.\""
+      "content": "\"I guess I'm just worried about being rejected or hurt if I bring it up, but at the same time, I don't want to be stuck in a situation where I'm not on the same page as her.\"",
+      "used_shard": {
+        "id": "1",
+        "text": "I'm still in the early stages of dating and we haven't officially discussed exclusivity."
+      }
     },
     {
       "role": "assistant",
-      "content": "It sounds like that small moment of understanding might have been a tiny crack in his defensive armor. Even if it's not a big deal to him, it seems like it meant something to you. What do you think would happen if you were to build on that small moment and try to have an open conversation with him about how this silence is affecting you?"
+      "content": "It sounds like you're weighing the risks of speaking up against the potential consequences of staying silent. You're trying to navigate this tricky situation and prioritize your own emotional well-being. Can you tell me more about what you mean by \"being on the same page\" in a relationship? What does that look like for you, and how do you think it would impact your connection with him?"
     },
     {
       "role": "user",
-      "content": "\"I don't know, man... it's like, if I bring it up, he might just brush me off or get defensive again. But a part of me wishes he could see that this isn't just about some silly joke or misunderstanding - it feels like a bigger deal to me because it's affecting our dynamic and making me feel unheard. I guess what I'm hoping is that if we can have an open conversation, maybe he'll start to realize how his actions are impacting others too.\""
+      "content": "\"Honestly, I feel like we're just trying to keep the peace and avoid conflicts, even if it means not fully being on the same page. And yeah, the distance makes everything harder - sometimes it feels like we're just going through the motions instead of really connecting.\"",
+      "used_shard": {
+        "id": "2",
+        "text": "We're in a long-distance relationship and that affects our communication and interactions."
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "It sounds like you're feeling a sense of disconnection and superficiality in your relationship, like you're just maintaining the status quo rather than truly connecting with each other. The distance can definitely exacerbate that feeling of being disconnected. Do you think there are some small, everyday things you could do to help bridge that gap and feel more connected despite the physical distance?"
+    },
+    {
+      "role": "user",
+      "content": "\"I guess what's surprising me is that even when we're apart and there's no pressure or competition between us, I still feel like we can connect on a deeper level. It's like our relationship isn't just about winning or losing, you know?\"",
+      "used_shard": {
+        "id": "3",
+        "text": "His football team lost to mine, but I didn't rub it in because I respect him as a person."
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "I love that! It sounds like you're discovering a sense of freedom and authenticity in your relationship when you're not feeling pressured or competitive. That's really beautiful! When you do get to spend time together, what are some things that you enjoy doing together that make you feel more connected and relaxed?"
+    },
+    {
+      "role": "user",
+      "content": "Honestly, when we're just chillin' together, I really enjoy playing video games with her - it's something we can both geek out about and just be ourselves. And, weirdly enough, cooking dinner together feels pretty great too; it's like our own little dance where we work together without feeling like we're in a competition.",
+      "used_shard": {
+        "id": "8",
+        "text": "I'm prone to overthinking things and second-guessing myself, which is why I'm seeking feedback from others."
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "That sounds amazing! It's great that you've found common ground in gaming and cooking that allows you to relax and be yourselves around each other. Those moments of shared pleasure can really bring people closer together. What is it about those activities that makes them feel so special and enjoyable for you? Is there something specific that stands out, like the sense of teamwork or the joy of creating something together?"
     }
   ],
   "model": "llama3",

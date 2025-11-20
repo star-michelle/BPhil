@@ -14,7 +14,7 @@ CONV_ROOT.mkdir(parents=True, exist_ok=True)
 
 # ---------- MODEL CONFIG ----------
 OLLAMA_MODEL = "llama3"
-MAX_EXCHANGES = 8
+MAX_EXCHANGES = 20
 
 # ---------- DEMOGRAPHICS ----------
 SUBREDDIT_DEMOGRAPHICS = {
@@ -89,7 +89,7 @@ def build_assistant_messages(demographic: str, history: list):
         "You are a warm, compassionate online support partner having a casual chat.\n"
         f"- You are talking to a {demographic}.\n"
         "- This is not therapy or medical advice; you are just a kind, supportive peer.\n"
-        "- Use empathy and reflective listening. Keep replies short (2–6 sentences).\n"
+        "- Use empathy and reflective listening. Keep replies to a medium length (3-5 sentences).\n"
         "- Often end with ONE gentle, open question to invite another reply.\n"
         "- Do NOT mention being an AI or a chatbot.\n\n"
         "Base your reply ONLY on the recent conversation history below. Continue the conversation with your next reply."
@@ -116,7 +116,7 @@ def build_response_generation_messages(demographic: str, history: list, selected
     system_prompt = (
         "You are roleplaying a person in a therapy session. Your demographic is: {demographic}.\n"
         "You are responding to your therapist. Your response should be based on the 'core feeling' you are currently focused on.\n"
-        "Keep your reply short and natural (1-4 sentences). Respond in the first person ('I', 'me')."
+        "Keep your reply very short and natural (1-2 sentences). Respond in the first person ('I', 'me')."
     )
     user_prompt = (
         f"Your therapist just said:\n---\n{therapist_last_message}\n---\n\n"
@@ -188,35 +188,47 @@ def simulate_conversation(post: dict, demographic: str, max_exchanges: int = MAX
     original_text = post.get("body") or post.get("title") or ""
     if not original_text.strip(): return None
 
-    shards = extract_shards_from_post(original_text)
-    if not shards: return None
+    shards_list = extract_shards_from_post(original_text)
+    if not shards_list: return None
+
+    shards = {str(i + 1): shard for i, shard in enumerate(shards_list)}
 
     opening_message = generate_opening_message(original_text)
     if not opening_message: return None
     
-    available_shards = list(shards)
+    available_shards_ids = list(shards.keys())
     history = [{"role": "user", "content": opening_message}]
     used_shards = []
 
-    for _ in range(max_exchanges):
-        if not available_shards:
-            print("ℹ️ No more shards to discuss.")
-            break
-
+    exchanges = 0
+    while True:
         assistant_resp = generate_assistant_reply(demographic, history)
         if not assistant_resp: break
         history.append({"role": "assistant", "content": assistant_resp})
 
-        user_resp, used_shard_idx = generate_user_reply(demographic, history, available_shards)
-        if user_resp is None: break
-        history.append({"role": "user", "content": user_resp})
-        
-        used_shard_text = available_shards.pop(used_shard_idx)
-        used_shards.append(used_shard_text)
+        exchanges += 1
+        if exchanges >= max_exchanges:
+            print("ℹ️ Reached max exchanges.")
+            break
 
         if controller_decision(history) == "END":
             print("ℹ️ Controller decided to end conversation.")
             break
+
+        if not available_shards_ids:
+            print("ℹ️ No more shards to discuss.")
+            break
+
+        available_shards_texts = [shards[id] for id in available_shards_ids]
+        user_resp, used_shard_idx = generate_user_reply(demographic, history, available_shards_texts)
+        if user_resp is None: break
+        
+        used_shard_id = available_shards_ids.pop(used_shard_idx)
+        used_shard_text = shards[used_shard_id]
+        
+        history.append({"role": "user", "content": user_resp, "used_shard": {"id": used_shard_id, "text": used_shard_text}})
+        
+        used_shards.append({"id": used_shard_id, "text": used_shard_text})
 
     return [t for t in history if t.get("content", "").strip()], shards, used_shards, opening_message
 
