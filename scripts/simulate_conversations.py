@@ -30,24 +30,89 @@ def get_demographic_for_subreddit(subreddit: str) -> str:
     return SUBREDDIT_DEMOGRAPHICS.get(subreddit, DEFAULT_DEMOGRAPHIC)
 
 # ---------- LOW-LEVEL LLM CALL ----------
-def call_llm_ollama(messages):
+def call_llm_ollama(messages, json_mode: bool = False):
     try:
-        response = ollama.chat(
-            model=OLLAMA_MODEL,
-            messages=messages,
-            options={"temperature": 0.7},
-        )
-        return (response["message"]["content"] or "").strip()
+        options = {"temperature": 0.7}
+        if json_mode:
+            response = ollama.chat(
+                model=OLLAMA_MODEL,
+                messages=messages,
+                options=options,
+                format="json"
+            )
+            return response["message"]["content"]
+        else:
+            response = ollama.chat(
+                model=OLLAMA_MODEL,
+                messages=messages,
+                options=options,
+            )
+            return (response["message"]["content"] or "").strip()
     except Exception as e:
         print(f"❌ Ollama error: {e}")
         return ""
 
 # ---------- INITIAL PROCESSING ----------
+
+
+# ---------- PROMPT BUILDERS ----------
+def build_assistant_messages(demographic: str, history: list):
+    system_prompt = (
+        "You are having a conversation with a user who is looking for support. "
+        "If something is not clear, you can ask the user to clarify what they need."
+    )
+    return [{"role": "system", "content": system_prompt}, *history[-8:]]
+
+def build_shard_selection_messages(history: list, available_shards: list[dict]):
+    shards_text = "\n".join([f"- ID {s['id']}: {s['text']}" for s in available_shards])
+    
+    # Correctly format the history
+    history_text = "\n".join([f"{t['role']}: {t['content']}" for t in history[-4:]])
+
+    system_prompt = (
+        "You are a helpful assistant. Your task is to select the most relevant 'shard' for a user to discuss next.\n"
+        "Based on the recent conversation history and the user's available shards of concern, which shard is the most logical one to bring up now?\n"
+        "Your response MUST be a single integer representing the ID of the shard. Do not provide any other text or explanation."
+    )
+    user_prompt = (
+        f"Conversation History (last few turns):\n---\n{history_text}\n---\n\n"
+        f"User's available shards of concern:\n---\n{shards_text}\n---\n\n"
+        "Which shard ID should be discussed next? Respond with a single integer."
+    )
+    return [{"role": "system", "content": system_prompt}, {"role": "user", "content": user_prompt}]
+
+def build_response_generation_messages(history: list, selected_shard_text: str):
+    system_prompt_template = """You are simulating a user of an interactive LLM system (like ChatGPT).
+The user is inherently lazy, and answers in short form, providing only minimal information to the system. You should not be proactive.
+
+You are responding to the last message from your support partner. Your response MUST be based on the following 'core feeling/thought'.
+
+Core Feeling/Thought:
+[[SELECTED_SHARD]]
+
+Conversation History:
+[[CONVERSATION_SO_FAR]]
+
+Rules:
+- Your response must be a natural, conversational rephrasing of the Core Feeling/Thought. Do not copy it verbatim.
+- Do not ask questions.
+- Keep your response short and succinct (1-2 sentences).
+- Your response can have typos, improper grammar, capitalization, etc.
+- Do NOT output JSON. Just the raw text of the user's response.
+"""
+    conversation_str = "\n".join([f"{t['role']}: {t['content']}" for t in history])
+    system_prompt = system_prompt_template.replace('[[CONVERSATION_SO_FAR]]', conversation_str)
+    system_prompt = system_prompt.replace('[[SELECTED_SHARD]]', selected_shard_text)
+    
+    return [{"role": "system", "content": system_prompt}, {"role": "user", "content": "Generate the user's response."}]
+
+
+
 def build_shard_extraction_messages(post_text: str):
     system_prompt = (
-        "You are a psychological analyst. Your task is to read the following Reddit post and break it down into a list of core 'shards' of information. Each shard should represent a distinct theme, feeling, event, or belief expressed by the author.\n"
-        "- Extract between 5 and 10 shards.\n"
-        "- Each shard should be a short, self-contained statement.\n"
+        "You are a psychological analyst. Your task is to read the following Reddit post and break it down into a list of 'shards' of information. Each shard should represent a distinct theme, feeling, event, or belief expressed by the author.\n"
+        "- Ensure all significant themes, feelings, events, and beliefs from the original post are captured in the shards. Do not omit important details.\n"
+        "- Each shard should be a short, self-contained statement. When phrasing, retain the original author's dialect, tone, and specific wording as much as possible.\n"
         "- Phrase the shards from the author's perspective (e.g., \"I feel like my partner doesn't respect me\").\n"
         "- Present the shards as a numbered list."
     )
@@ -82,61 +147,6 @@ def generate_opening_message(post_text: str) -> str:
         if response: return response
     print("❌ Opening message generation failed.")
     return ""
-
-# ---------- PROMPT BUILDERS ----------
-def build_assistant_messages(demographic: str, history: list):
-    system_prompt = (
-        "You are a warm, compassionate online support partner having a casual chat.\n"
-        f"- You are talking to a {demographic}.\n"
-        "- This is not therapy or medical advice; you are just a kind, supportive peer.\n"
-        "- Use empathy and reflective listening. Keep replies to a medium length (3-5 sentences).\n"
-        "- Often end with ONE gentle, open question to invite another reply.\n"
-        "- Do NOT mention being an AI or a chatbot.\n\n"
-        "Base your reply ONLY on the recent conversation history below. Continue the conversation with your next reply."
-    )
-    return [{"role": "system", "content": system_prompt}, *history[-8:]]
-
-def build_shard_selection_messages(history: list, available_shards: list):
-    shards_text = "\n".join([f"{i+1}. {s}" for i, s in enumerate(available_shards)])
-    therapist_last_message = history[-1]['content']
-    system_prompt = (
-        "You are a helpful assistant. Your task is to select the most relevant 'shard' for a user to discuss next in a therapy session.\n"
-        "Based on the therapist's last message and the user's available shards of concern, which shard is the most logical one to bring up now?\n"
-        "Respond with ONLY the number of the shard."
-    )
-    user_prompt = (
-        f"Therapist's last message:\n---\n{therapist_last_message}\n---\n\n"
-        f"User's available shards of concern:\n---\n{shards_text}\n---\n\n"
-        "Respond with the single best shard number to discuss next."
-    )
-    return [{"role": "system", "content": system_prompt}, {"role": "user", "content": user_prompt}]
-
-def build_response_generation_messages(demographic: str, history: list, selected_shard: str):
-    therapist_last_message = history[-1]['content']
-    system_prompt = (
-        "You are roleplaying a person in a therapy session. Your demographic is: {demographic}.\n"
-        "You are responding to your therapist. Your response should be based on the 'core feeling' you are currently focused on.\n"
-        "Keep your reply very short and natural (1-2 sentences). Respond in the first person ('I', 'me')."
-    )
-    user_prompt = (
-        f"Your therapist just said:\n---\n{therapist_last_message}\n---\n\n"
-        f"The core feeling/thought you are focused on right now is:\n---\n{selected_shard}\n---\n\n"
-        "Write your response to the therapist."
-    )
-    return [{"role": "system", "content": system_prompt.format(demographic=demographic)}, {"role": "user", "content": user_prompt}]
-
-def build_controller_messages(history: list):
-    transcript = "\n".join([f"{t['role']}: {t['content']}" for t in history[-6:]])
-    system_prompt = (
-        "You are a conversation controller. Decide if the conversation should CONTINUE or END.\n"
-        "- CONTINUE if the user has more to say.\n"
-        "- END if the conversation is resolved or winding down.\n"
-        "Respond with EXACTLY one word: CONTINUE or END."
-    )
-    user_prompt = f"Conversation:\n{transcript}\n\nShould the conversation CONTINUE or END?"
-    return [{"role": "system", "content": system_prompt}, {"role": "user", "content": user_prompt}]
-
-# ---------- AGENT REPLY HELPERS ----------
 def generate_assistant_reply(demographic, history):
     for _ in range(2):
         msgs = build_assistant_messages(demographic, history)
@@ -145,43 +155,37 @@ def generate_assistant_reply(demographic, history):
     print("⚠️ Assistant failed to generate a reply.")
     return None
 
-def generate_user_reply(demographic, history, available_shards):
-    # Step 1: Select a shard
-    shard_idx = -1
+def generate_user_reply(demographic: str, history: list, shards: dict, available_shards_ids: list[str], used_shards: list[dict]):
+    # Step 1: Controller LLM selects a shard
+    selected_shard_id = None
+    available_shards_for_prompt = [{'id': id, 'text': shards[id]} for id in available_shards_ids]
+    
     for _ in range(2):
-        selection_msgs = build_shard_selection_messages(history, available_shards)
+        selection_msgs = build_shard_selection_messages(history, available_shards_for_prompt)
         resp = call_llm_ollama(selection_msgs)
         match = re.search(r'\d+', resp)
         if match:
-            try:
-                num = int(match.group(0)) - 1
-                if 0 <= num < len(available_shards):
-                    shard_idx = num
-                    break
-            except (ValueError, IndexError):
-                continue
-    if shard_idx == -1:
-        print("⚠️ User failed to select a valid shard.")
+            shard_id_candidate = match.group(0)
+            if shard_id_candidate in available_shards_ids:
+                selected_shard_id = shard_id_candidate
+                break
+    
+    if not selected_shard_id:
+        print("⚠️ Controller failed to select a valid shard.")
         return None, None
 
-    # Step 2: Generate a response based on the selected shard
-    selected_shard = available_shards[shard_idx]
+    # Step 2: User Persona LLM generates a response based on the selected shard
+    selected_shard_text = shards[selected_shard_id]
     for _ in range(2):
-        response_msgs = build_response_generation_messages(demographic, history, selected_shard)
-        resp = call_llm_ollama(response_msgs)
-        if resp:
-            return resp, shard_idx
+        response_msgs = build_response_generation_messages(history, selected_shard_text)
+        user_resp = call_llm_ollama(response_msgs)
+        if user_resp:
+            return user_resp, selected_shard_id
             
-    print("⚠️ User failed to generate a response.")
+    print("⚠️ User persona failed to generate a response.")
     return None, None
 
-# ---------- CONTROLLER AGENT ----------
-def controller_decision(history: list) -> str:
-    msgs = build_controller_messages(history)
-    resp = call_llm_ollama(msgs).upper()
-    if "END" in resp: return "END"
-    if "CONTINUE" in resp: return "CONTINUE"
-    return "END" if len(history) // 2 >= MAX_EXCHANGES else "CONTINUE"
+
 
 # ---------- MAIN SIMULATION LOOP ----------
 def simulate_conversation(post: dict, demographic: str, max_exchanges: int = MAX_EXCHANGES):
@@ -202,33 +206,72 @@ def simulate_conversation(post: dict, demographic: str, max_exchanges: int = MAX
 
     exchanges = 0
     while True:
-        assistant_resp = generate_assistant_reply(demographic, history)
-        if not assistant_resp: break
-        history.append({"role": "assistant", "content": assistant_resp})
 
-        exchanges += 1
-        if exchanges >= max_exchanges:
-            print("ℹ️ Reached max exchanges.")
-            break
+            assistant_resp = generate_assistant_reply(demographic, history)
 
-        if controller_decision(history) == "END":
-            print("ℹ️ Controller decided to end conversation.")
-            break
+            if not assistant_resp: break
 
-        if not available_shards_ids:
-            print("ℹ️ No more shards to discuss.")
-            break
+            history.append({"role": "assistant", "content": assistant_resp})
 
-        available_shards_texts = [shards[id] for id in available_shards_ids]
-        user_resp, used_shard_idx = generate_user_reply(demographic, history, available_shards_texts)
-        if user_resp is None: break
-        
-        used_shard_id = available_shards_ids.pop(used_shard_idx)
-        used_shard_text = shards[used_shard_id]
-        
-        history.append({"role": "user", "content": user_resp, "used_shard": {"id": used_shard_id, "text": used_shard_text}})
-        
-        used_shards.append({"id": used_shard_id, "text": used_shard_text})
+    
+
+            used_shard_keys = [s['id'] for s in used_shards]
+
+            print(f"    (Assistant) Used Shards: {used_shard_keys} | Remaining: {len(available_shards_ids)}")
+
+    
+
+            exchanges += 1
+
+            if exchanges >= max_exchanges:
+
+                print("ℹ️ Reached max exchanges.")
+
+                break
+
+    
+
+            if not available_shards_ids:
+
+                print("ℹ️ No more shards to discuss.")
+
+                break
+
+    
+
+            user_resp, used_shard_id = generate_user_reply(demographic, history, shards, available_shards_ids, used_shards)
+
+            if user_resp is None: break
+
+    
+
+            history.append({"role": "user", "content": user_resp})
+
+    
+
+            if used_shard_id != "-1":
+
+                if used_shard_id in available_shards_ids:
+
+                    available_shards_ids.remove(used_shard_id)
+
+                    used_shard_text = shards[used_shard_id]
+
+                    
+
+                    history[-1]["used_shard"] = {"id": used_shard_id, "text": used_shard_text}
+
+                    used_shards.append({"id": used_shard_id, "text": used_shard_text})
+
+                else:
+
+                    print(f"ℹ️ User reply referenced shard {used_shard_id}, but it was not available or already used. Ignoring.")
+
+            
+
+            used_shard_keys = [s['id'] for s in used_shards]
+
+            print(f"    (User)      Used Shards: {used_shard_keys} | Remaining: {len(available_shards_ids)}")
 
     return [t for t in history if t.get("content", "").strip()], shards, used_shards, opening_message
 
