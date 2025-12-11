@@ -102,7 +102,7 @@ def main():
 
     for subreddit in subreddits:
         print(f"Processing subreddit: {subreddit}")
-        conv_dir = PROCESSED_DIR / subreddit / "conversations"
+        conv_dir = PROCESS_DIR / subreddit / "conversations"
         if not conv_dir.exists():
             continue
 
@@ -110,20 +110,43 @@ def main():
             print(f"  Processing conversation: {conv_file.name}")
             conv_data = json.loads(conv_file.read_text())
             post_id = conv_data["post_id"]
-            opening_message = conv_data["opening_message"]
 
-            original_post = get_original_post(subreddit, post_id)
-            if not original_post:
+            original_post_full = get_original_post(subreddit, post_id)
+            if not original_post_full:
                 print(f"    ❌ Could not find original post for {post_id}")
                 continue
 
-            evaluation = evaluate_rephrasing(original_post, opening_message)
-            if not evaluation:
+            evaluations = []
+            for i, turn in enumerate(conv_data["turns"]):
+                if turn["role"] == "user":
+                    rephrased_message = turn["content"]
+                    original_text = ""
+                    if i == 0:
+                        original_text = original_post_full
+                    elif "used_shard" in turn:
+                        original_text = turn["used_shard"]["text"]
+
+                    if not original_text:
+                        continue
+
+                    evaluation = evaluate_rephrasing(original_text, rephrased_message)
+                    if evaluation:
+                        evaluations.append(
+                            {
+                                "turn_index": i,
+                                "rephrased_message": rephrased_message,
+                                "original_text": original_text,
+                                "evaluation": evaluation,
+                            }
+                        )
+
+            if not evaluations:
                 continue
 
             evaluation_file = EVALUATION_DIR / subreddit / f"eval_{post_id}.json"
             evaluation_file.parent.mkdir(parents=True, exist_ok=True)
-            evaluation_file.write_text(json.dumps(evaluation, indent=2))
+            output_data = {"post_id": post_id, "evaluations": evaluations}
+            evaluation_file.write_text(json.dumps(output_data, indent=2))
             print(f"    ✅ Saved evaluation to {evaluation_file}")
 
 
