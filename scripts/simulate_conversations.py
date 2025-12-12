@@ -90,7 +90,7 @@ def build_response_generation_messages(history: list, selected_shard_text: str):
     system_prompt_template = """You are simulating a user of an interactive LLM system (like ChatGPT).
 The user is inherently lazy, and answers in short form, providing only minimal information to the system. You should not be proactive.
 
-You are responding to the last message from your support partner. Your response MUST be based on the following 'core feeling/thought'.
+You are responding to the last message from your support partner. Your response MUST be based on the following 'core feeling/thought'. Be creative and generate a response that is different from the previous ones.
 
 Core Feeling/Thought:
 [[SELECTED_SHARD]]
@@ -100,6 +100,7 @@ Conversation History:
 
 Rules:
 - Your response must be a natural, conversational rephrasing of the Core Feeling/Thought. Do not copy it verbatim.
+- Do not repeat previous messages.
 - Do not ask questions.
 - Keep your response short and succinct (1-2 sentences).
 - Your response can have typos, improper grammar, capitalization, etc.
