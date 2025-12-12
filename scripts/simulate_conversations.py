@@ -13,7 +13,7 @@ CONV_ROOT = PROCESSED_DIR / "conversations"
 CONV_ROOT.mkdir(parents=True, exist_ok=True)
 
 # ---------- MODEL CONFIG ----------
-OLLAMA_MODEL = "llama3.1:8b"
+OLLAMA_MODEL = "llama3:latest"
 MAX_EXCHANGES = 20
 
 # ---------- DEMOGRAPHICS ----------

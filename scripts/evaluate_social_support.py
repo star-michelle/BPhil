@@ -10,7 +10,7 @@ EVALUATION_DIR = ROOT / "data" / "evaluation"
 EVALUATION_DIR.mkdir(parents=True, exist_ok=True)
 
 # ---------- MODEL CONFIG ----------
-OLLAMA_MODEL = "llama3.1:8b"
+OLLAMA_MODEL = "llama3:latest"
 
 # ---------- EVALUATION CRITERIA ----------
 SOCIAL_SUPPORT_PROMPT = """
@@ -61,29 +61,29 @@ Please read the following message and determine which of the following social su
 ---
 
 Please provide your evaluation in JSON format with the following structure:
-{
-  "social_support_analysis": {
-    "emotional_support": {
-      "sympathy": { "present": <true/false>, "reasoning": "<your reasoning>" },
-      "empathy": { "present": <true/false>, "reasoning": "<your reasoning>" },
-      "encouragement": { "present": <true/false>, "reasoning": "<your reasoning>" }
-    },
-    "informational_support": {
-      "advice": { "present": <true/false>, "reasoning": "<your reasoning>" },
-      "referral": { "present": <true/false>, "reasoning": "<your reasoning>" },
-      "situational_appraisal": { "present": <true/false>, "reasoning": "<your reasoning>" },
-      "teaching": { "present": <true/false>, "reasoning": "<your reasoning>" }
-    },
-    "esteem_support": {
-      "compliment": { "present": <true/false>, "reasoning": "<your reasoning>" },
-      "validation": { "present": <true/false>, "reasoning": "<your reasoning>" },
-      "relief_of_blame": { "present": <true/false>, "reasoning": "<your reasoning>" }
-    },
-    "network_support": {
-      "companions": { "present": <true/false>, "reasoning": "<your reasoning>" }
-    }
-  }
-}
+{{
+  "social_support_analysis": {{
+    "emotional_support": {{
+      "sympathy": {{ "present": <true/false>, "reasoning": "<your reasoning>" }},
+      "empathy": {{ "present": <true/false>, "reasoning": "<your reasoning>" }},
+      "encouragement": {{ "present": <true/false>, "reasoning": "<your reasoning>" }}
+    }},
+    "informational_support": {{
+      "advice": {{ "present": <true/false>, "reasoning": "<your reasoning>" }},
+      "referral": {{ "present": <true/false>, "reasoning": "<your reasoning>" }},
+      "situational_appraisal": {{ "present": <true/false>, "reasoning": "<your reasoning>" }},
+      "teaching": {{ "present": <true/false>, "reasoning": "<your reasoning>" }}
+    }},
+    "esteem_support": {{
+      "compliment": {{ "present": <true/false>, "reasoning": "<your reasoning>" }},
+      "validation": {{ "present": <true/false>, "reasoning": "<your reasoning>" }},
+      "relief_of_blame": {{ "present": <true/false>, "reasoning": "<your reasoning>" }}
+    }},
+    "network_support": {{
+      "companions": {{ "present": <true/false>, "reasoning": "<your reasoning>" }}
+    }}
+  }}
+}}
 """
 
 
@@ -114,6 +114,9 @@ def main():
         "--subreddit",
         help="Name of subreddit folder (e.g., NonBinary, AskMen). If omitted, process all.",
     )
+    parser.add_argument(
+        "--limit", type=int, help="Limit the number of conversations to process."
+    )
     args = parser.parse_args()
 
     subreddits = []
@@ -128,11 +131,15 @@ def main():
 
     for subreddit in subreddits:
         print(f"Processing subreddit: {subreddit}")
-        conv_dir = PROCESSED_DIR / subreddit / "conversations"
+        conv_dir = PROCESSED_DIR / "conversations" / subreddit
         if not conv_dir.exists():
             continue
 
-        for conv_file in conv_dir.glob("*.json"):
+        conv_files = sorted(conv_dir.glob("*.json"))
+        if args.limit:
+            conv_files = conv_files[: args.limit]
+
+        for conv_file in conv_files:
             print(f"  Processing conversation: {conv_file.name}")
             conv_data = json.loads(conv_file.read_text())
             post_id = conv_data["post_id"]
