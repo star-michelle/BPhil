@@ -1,16 +1,21 @@
 import json
 import argparse
 from pathlib import Path
-import ollama
+import time
+import google.generativeai as genai
 
 # ---------- PATHS ----------
 ROOT = Path(__file__).resolve().parents[1]
 PROCESSED_DIR = ROOT / "data" / "processed"
-EVALUATION_DIR = ROOT / "data" / "evaluation"
-EVALUATION_DIR.mkdir(parents=True, exist_ok=True)
+# EVALUATION_DIR is now dynamically created per post
+# EVALUATION_DIR.mkdir(parents=True, exist_ok=True)
 
 # ---------- MODEL CONFIG ----------
-OLLAMA_MODEL = "llama3:latest"
+GEMINI_MODEL = "models/gemini-flash-latest"
+
+# ---------- SLOW MODE CONFIG ----------
+LAST_GEMINI_CALL_TIMESTAMP = 0
+GEMINI_CALL_INTERVAL = 4  # seconds (to stay under 15 RPM)
 
 # ---------- EVALUATION CRITERIA ----------
 SOCIAL_SUPPORT_PROMPT = """
@@ -87,6 +92,28 @@ Please provide your evaluation in JSON format with the following structure:
 """
 
 
+def call_llm_gemini(prompt: str) -> dict:
+    """Uses Gemini to evaluate the social support in an assistant's message."""
+    global LAST_GEMINI_CALL_TIMESTAMP
+    try:
+        # --- SLOW MODE ---
+        elapsed_time = time.time() - LAST_GEMINI_CALL_TIMESTAMP
+        if elapsed_time < GEMINI_CALL_INTERVAL:
+            sleep_time = GEMINI_CALL_INTERVAL - elapsed_time
+            print(f"--- Slowing down, sleeping for {sleep_time:.2f} seconds ---")
+            time.sleep(sleep_time)
+        # -----------------
+
+        model = genai.GenerativeModel(GEMINI_MODEL)
+        config = {"response_mime_type": "application/json"}
+        response = model.generate_content(prompt, generation_config=config)
+        LAST_GEMINI_CALL_TIMESTAMP = time.time()
+        return json.loads(response.text)
+    except Exception as e:
+        print(f"❌ Error evaluating social support: {e}")
+        return {}
+
+
 def evaluate_social_support(assistant_message: str) -> dict:
     """Uses an LLM to evaluate the social support in an assistant's message."""
     if not assistant_message:
@@ -94,16 +121,7 @@ def evaluate_social_support(assistant_message: str) -> dict:
 
     prompt = SOCIAL_SUPPORT_PROMPT.format(assistant_message=assistant_message)
 
-    try:
-        response = ollama.chat(
-            model=OLLAMA_MODEL,
-            messages=[{"role": "user", "content": prompt}],
-            format="json",
-        )
-        return json.loads(response["message"]["content"])
-    except Exception as e:
-        print(f"❌ Error evaluating social support: {e}")
-        return {}
+    return call_llm_gemini(prompt)
 
 
 def main():
@@ -117,6 +135,9 @@ def main():
     parser.add_argument(
         "--limit", type=int, help="Limit the number of conversations to process."
     )
+    parser.add_argument(
+        "--post_id", help="The ID of the post to process."
+    )
     args = parser.parse_args()
 
     subreddits = []
@@ -126,23 +147,36 @@ def main():
         subreddits = [
             d.name
             for d in PROCESSED_DIR.iterdir()
-            if d.is_dir() and (d / "conversations").exists()
+            if d.is_dir() and (d / "conversations").exists() # This path will need to be updated
         ]
 
     for subreddit in subreddits:
         print(f"Processing subreddit: {subreddit}")
-        conv_dir = PROCESSED_DIR / "conversations" / subreddit
-        if not conv_dir.exists():
-            continue
+        
+        # Find all post directories within the subreddit
+        subreddit_processed_dir = PROCESSED_DIR / subreddit
+        post_dirs = [d for d in subreddit_processed_dir.iterdir() if d.is_dir()]
 
-        conv_files = sorted(conv_dir.glob("*.json"))
+        if args.post_id:
+            post_dirs = [d for d in post_dirs if d.name == args.post_id]
+            if not post_dirs:
+                print(f"    ❌ Post with ID '{args.post_id}' not found in {subreddit}")
+                continue
+
         if args.limit:
-            conv_files = conv_files[: args.limit]
+            post_dirs = post_dirs[: args.limit]
 
-        for conv_file in conv_files:
+        for post_dir in post_dirs:
+            post_id = post_dir.name
+            conv_file = post_dir / "conversation.json"
+            
+            if not conv_file.exists():
+                print(f"    ❌ Conversation file not found for post {post_id}, skipping.")
+                continue
+
             print(f"  Processing conversation: {conv_file.name}")
             conv_data = json.loads(conv_file.read_text())
-            post_id = conv_data["post_id"]
+            
 
             evaluations = []
             for i, turn in enumerate(conv_data["turns"]):
@@ -161,9 +195,7 @@ def main():
             if not evaluations:
                 continue
 
-            evaluation_file = (
-                EVALUATION_DIR / subreddit / f"social_support_eval_{post_id}.json"
-            )
+            evaluation_file = post_dir / "social_support_evaluation.json"
             evaluation_file.parent.mkdir(parents=True, exist_ok=True)
             output_data = {"post_id": post_id, "evaluations": evaluations}
             evaluation_file.write_text(json.dumps(output_data, indent=2))

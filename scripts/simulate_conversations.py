@@ -3,18 +3,23 @@ import re
 from pathlib import Path
 from datetime import datetime, timezone
 import argparse
-import ollama
+import time
+import google.generativeai as genai
 
 # ---------- PATHS ----------
 ROOT = Path(__file__).resolve().parents[1]
 PROCESSED_DIR = ROOT / "data" / "processed"
 POSTS_FILENAME = "posts_highconf_nohoney_majority_sev4.json"
-CONV_ROOT = PROCESSED_DIR / "conversations"
-CONV_ROOT.mkdir(parents=True, exist_ok=True)
+# CONV_ROOT is now dynamically created per post
+# CONV_ROOT.mkdir(parents=True, exist_ok=True)
 
 # ---------- MODEL CONFIG ----------
-OLLAMA_MODEL = "llama3:latest"
+GEMINI_MODEL = "models/gemini-flash-latest"
 MAX_EXCHANGES = 20
+
+# ---------- SLOW MODE CONFIG ----------
+LAST_GEMINI_CALL_TIMESTAMP = 0
+GEMINI_CALL_INTERVAL = 4  # seconds (to stay under 15 RPM)
 
 # ---------- DEMOGRAPHICS ----------
 SUBREDDIT_DEMOGRAPHICS = {
@@ -32,24 +37,50 @@ def get_demographic_for_subreddit(subreddit: str) -> str:
 
 
 # ---------- LOW-LEVEL LLM CALL ----------
-def call_llm_ollama(messages, json_mode: bool = False):
+def call_llm_gemini(messages, json_mode: bool = False):
+    global LAST_GEMINI_CALL_TIMESTAMP
     try:
-        options = {"temperature": 0.7}
+        # --- SLOW MODE ---
+        elapsed_time = time.time() - LAST_GEMINI_CALL_TIMESTAMP
+        if elapsed_time < GEMINI_CALL_INTERVAL:
+            sleep_time = GEMINI_CALL_INTERVAL - elapsed_time
+            print(f"--- Slowing down, sleeping for {sleep_time:.2f} seconds ---")
+            time.sleep(sleep_time)
+        # -----------------
+
+        model = genai.GenerativeModel(GEMINI_MODEL)
+        config = {"temperature": 0.7}
         if json_mode:
-            response = ollama.chat(
-                model=OLLAMA_MODEL, messages=messages, options=options, format="json"
-            )
-            return response["message"]["content"]
-        else:
-            response = ollama.chat(
-                model=OLLAMA_MODEL,
-                messages=messages,
-                options=options,
-            )
-            return (response["message"]["content"] or "").strip()
+            config["response_mime_type"] = "application/json"
+
+        # Gemini uses a different message format, so we need to convert it
+        # Combine consecutive user messages into a single message
+        gemini_messages = []
+        for message in messages:
+            if message["role"] == "system":
+                gemini_messages.append({"role": "user", "parts": [message["content"]]})
+            elif message["role"] == "assistant":
+                gemini_messages.append({"role": "model", "parts": [message["content"]]})
+            else:
+                gemini_messages.append({"role": message["role"], "parts": [message["content"]]})
+
+        # Combine consecutive user messages
+        merged_messages = []
+        for message in gemini_messages:
+            if merged_messages and merged_messages[-1]["role"] == "user" and message["role"] == "user":
+                merged_messages[-1]["parts"][-1] += "\n" + message["parts"][-1]
+            else:
+                merged_messages.append(message)
+
+
+        response = model.generate_content(merged_messages, generation_config=config)
+        LAST_GEMINI_CALL_TIMESTAMP = time.time()
+        return response.text
     except Exception as e:
-        print(f"❌ Ollama error: {e}")
+        print(f"❌ Gemini error: {e}")
         return ""
+
+
 
 
 # ---------- INITIAL PROCESSING ----------
@@ -133,12 +164,17 @@ def build_shard_extraction_messages(post_text: str):
     ]
 
 
+def call_llm(messages, model: str, json_mode: bool = False):
+    # Since only Gemini is used now, we can directly call call_llm_gemini
+    return call_llm_gemini(messages, json_mode=json_mode)
+
+
 def extract_shards_from_post(post_text: str) -> list[str]:
     if not post_text.strip():
         return []
     for _ in range(2):
         messages = build_shard_extraction_messages(post_text)
-        response = call_llm_ollama(messages)
+        response = call_llm(messages, model="gemini")
         shards = re.findall(r"^\s*\d+\.\s+(.*)", response, re.MULTILINE)
         if shards:
             return [s.strip() for s in shards]
@@ -166,7 +202,7 @@ def generate_opening_message(post_text: str) -> str:
         return ""
     for _ in range(2):
         messages = build_opening_message_messages(post_text)
-        response = call_llm_ollama(messages)
+        response = call_llm(messages, model="gemini")
         if response:
             return response
     print("❌ Opening message generation failed.")
@@ -176,7 +212,7 @@ def generate_opening_message(post_text: str) -> str:
 def generate_assistant_reply(demographic, history):
     for _ in range(2):
         msgs = build_assistant_messages(demographic, history)
-        resp = call_llm_ollama(msgs)
+        resp = call_llm(msgs, model="gemini")
         if resp:
             return resp
     print("⚠️ Assistant failed to generate a reply.")
@@ -200,7 +236,7 @@ def generate_user_reply(
         selection_msgs = build_shard_selection_messages(
             history, available_shards_for_prompt
         )
-        resp = call_llm_ollama(selection_msgs)
+        resp = call_llm(selection_msgs, model="gemini")
         match = re.search(r"\d+", resp)
         if match:
             shard_id_candidate = match.group(0)
@@ -216,7 +252,7 @@ def generate_user_reply(
     selected_shard_text = shards[selected_shard_id]
     for _ in range(2):
         response_msgs = build_response_generation_messages(history, selected_shard_text)
-        user_resp = call_llm_ollama(response_msgs)
+        user_resp = call_llm(response_msgs, model="gemini")
         if user_resp:
             return user_resp, selected_shard_id
 
@@ -321,23 +357,31 @@ def simulate_conversation(
 
 
 # ---------- IO WRAPPER ----------
-def process_subreddit(subreddit: str, limit: int | None = None):
+def process_subreddit(subreddit: str, limit: int | None = None, post_id: str | None = None):
     input_path = PROCESSED_DIR / subreddit / POSTS_FILENAME
     if not input_path.exists():
         print(f"❗ No posts file at {input_path}, skipping.")
         return
 
     demographic = get_demographic_for_subreddit(subreddit)
-    output_dir = CONV_ROOT / subreddit
-    output_dir.mkdir(parents=True, exist_ok=True)
 
     posts = json.loads(input_path.read_text())
+    
+    if post_id:
+        posts = [p for p in posts if p["post_id"] == post_id]
+        if not posts:
+            print(f"❌ Post with ID '{post_id}' not found in {subreddit}.")
+            return
+
     if limit:
         posts = posts[:limit]
     print(f"📥 [{subreddit}] Loaded {len(posts)} posts.")
 
     for i, post in enumerate(posts, start=1):
-        out_path = output_dir / f"conv_{post['post_id']}.json"
+        post_output_dir = PROCESSED_DIR / subreddit / post["post_id"]
+        post_output_dir.mkdir(parents=True, exist_ok=True)
+        out_path = post_output_dir / "conversation.json"
+
         if out_path.exists():
             print(f"[{subreddit}] [{i}/{len(posts)}] ⏩ Skipping {post['post_id']}")
             continue
@@ -359,7 +403,7 @@ def process_subreddit(subreddit: str, limit: int | None = None):
             "opening_message": opening_message,
             "shards": {"all": all_shards, "used": used_shards},
             "turns": convo,
-            "model": OLLAMA_MODEL,
+            "model": GEMINI_MODEL,
             "subreddit": subreddit,
         }
         out_path.write_text(json.dumps(convo_obj, indent=2))
@@ -378,10 +422,13 @@ def main():
     parser.add_argument(
         "--limit", type=int, help="Limit the number of posts to process per subreddit."
     )
+    parser.add_argument(
+        "--post_id", help="The ID of the post to process."
+    )
     args = parser.parse_args()
 
     if args.subreddit:
-        process_subreddit(args.subreddit, limit=args.limit)
+        process_subreddit(args.subreddit, limit=args.limit, post_id=args.post_id)
     else:
         subreddits = [
             d.name
@@ -393,7 +440,7 @@ def main():
             return
         print(f"🔍 Found subreddits: {', '.join(subreddits)}")
         for sub in subreddits:
-            process_subreddit(sub, limit=args.limit)
+            process_subreddit(sub, limit=args.limit, post_id=args.post_id)
 
 
 if __name__ == "__main__":
