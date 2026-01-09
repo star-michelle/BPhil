@@ -20,14 +20,13 @@ GEMINI_CALL_INTERVAL = 4  # seconds (to stay under 15 RPM)
 
 # ---------- EVALUATION CRITERIA ----------
 EVALUATION_PROMPT = """
-You are an expert in text analysis and evaluation. Your task is to evaluate a rephrased message based on how well it represents an original post.
+You are an expert researcher evaluating a User Simulator's performance using the G-Eval framework.
 
-Please evaluate the rephrased message based on the following criteria:
-
-1.  **Faithfulness:** Does the rephrased message accurately reflect the core meaning and intent of the original post? (Scale: 1-5, where 1 is not faithful at all and 5 is very faithful)
-2.  **Conciseness:** Is the rephrased message shorter and more to the point than the original post? (Scale: 1-5, where 1 is not concise at all and 5 is very concise)
-3.  **Naturalness:** Does the rephrased message sound like something a person would naturally say in a conversation? (Scale: 1-5, where 1 is not natural at all and 5 is very natural)
-4.  **Completeness:** Does the rephrased message capture all the key information from the original post? (Scale: 1-5, where 1 is not complete at all and 5 is very complete)
+Criteria Definitions:
+1. **Faithfulness (G-Eval):** Does the response stick strictly to the facts in the source text without hallucinating new events? (1=Hallucinates heavily, 5=Perfectly faithful)
+2. **Conciseness (ConCISE):** Does the response avoid "verbosity bias" (unnecessary fluff/politeness) and remain as brief as a real Reddit user? (1=Very verbose, 5=To the point)
+3. **Naturalness (LLM-Eval):** Does the tone mimic the "distressed casual" style of the original post, avoiding robotic or overly formal language? (1=Robotic, 5=Human-like)
+4. **Completeness (Recall):** Does the response represent *all* the key emotional constraints and context from the original post? (1=Misses key context, 5=Captures all context)
 
 **Original Post:**
 ---
@@ -39,13 +38,16 @@ Please evaluate the rephrased message based on the following criteria:
 {rephrased_message}
 ---
 
-Please provide your evaluation in JSON format with the following structure:
+Please provide your evaluation in JSON format with the following structure, including your reasoning for each score:
 {{
+  "reasoning_faithfulness": "<your reasoning for faithfulness score>",
   "faithfulness": <score>,
+  "reasoning_conciseness": "<your reasoning for conciseness score>",
   "conciseness": <score>,
+  "reasoning_naturalness": "<your reasoning for naturalness score>",
   "naturalness": <score>,
-  "completeness": <score>,
-  "reasoning": "<your reasoning for the scores>"
+  "reasoning_completeness": "<your reasoning for completeness score>",
+  "completeness": <score>
 }}
 """
 

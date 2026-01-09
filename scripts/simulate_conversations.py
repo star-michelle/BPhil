@@ -15,7 +15,6 @@ POSTS_FILENAME = "posts_highconf_nohoney_majority_sev4.json"
 
 # ---------- MODEL CONFIG ----------
 GEMINI_MODEL = "models/gemini-flash-latest"
-MAX_EXCHANGES = 20
 
 # ---------- SLOW MODE CONFIG ----------
 LAST_GEMINI_CALL_TIMESTAMP = 0
@@ -262,7 +261,7 @@ def generate_user_reply(
 
 # ---------- MAIN SIMULATION LOOP ----------
 def simulate_conversation(
-    post: dict, demographic: str, max_exchanges: int = MAX_EXCHANGES
+    post: dict, demographic: str
 ):
     original_text = post.get("body") or post.get("title") or ""
     if not original_text.strip():
@@ -300,11 +299,7 @@ def simulate_conversation(
 
         exchanges += 1
 
-        if exchanges >= max_exchanges:
 
-            print("ℹ️ Reached max exchanges.")
-
-            break
 
         if not available_shards_ids:
 
