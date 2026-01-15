@@ -1,0 +1,305 @@
+{
+  "post_id": "iguu2v",
+  "evaluations": [
+    {
+      "turn_index": 1,
+      "assistant_message": "That sounds incredibly frightening, and it's completely understandable that you are worried and unsure what to do right now. Please take a deep breath.\n\nI can certainly help you think through the signs and symptoms you should be looking for. When a baby falls, especially at that age, there are several key things that medical professionals look for to determine if an emergency room visit is necessary.\n\nTo help you assess the situation, could you tell me a little more about your baby's current condition right now?\n\n1. **How is she acting right now?** Is she awake and alert? Did she cry immediately after the fall?\n2. **What does the bump look like?** Is it getting bigger? Is there any bleeding?\n3. **What was the fall like?** Approximately how far did she fall (e.g., height of the bed)? What kind of surface did she land on (e.g., carpet, wood floor)?\n4. **Did she lose consciousness, even for a moment?**\n\nFocusing on her behavior is the most important first step.",
+      "evaluation": {
+        "social_support_analysis": {
+          "emotional_support": {
+            "sympathy": {
+              "present": false,
+              "reasoning": "The message expresses compassion and understanding, but it does not contain explicit expressions of sorrow or regret (e.g., 'I am sorry that happened')."
+            },
+            "empathy": {
+              "present": true,
+              "reasoning": "The message explicitly labels and reflects cognitive understanding of the recipient's feelings: 'That sounds incredibly frightening, and it's completely understandable that you are worried and unsure what to do right now.'"
+            },
+            "encouragement": {
+              "present": false,
+              "reasoning": "The message focuses on immediate assessment and de-escalation, not future-oriented hope or empowerment."
+            }
+          },
+          "informational_support": {
+            "advice": {
+              "present": true,
+              "reasoning": "The message includes actionable suggestions the recipient can immediately carry out, such as 'Please take a deep breath' and 'Focusing on her behavior is the most important first step.' The list of questions also serves as an actionable framework for independent assessment."
+            },
+            "referral": {
+              "present": false,
+              "reasoning": "While the message references what 'medical professionals look for,' it does not refer the recipient to external help like a helpline, doctor, or emergency room."
+            },
+            "situational_appraisal": {
+              "present": false,
+              "reasoning": "The message focuses on gathering factual data and symptoms, not on redefining the experience or helping the recipient make cognitive sense of the meaning of the fall itself."
+            },
+            "teaching": {
+              "present": true,
+              "reasoning": "The message imparts objective facts and steps for assessment ('several key things that medical professionals look for') via a detailed, objective symptom checklist (Questions 1-4)."
+            }
+          },
+          "esteem_support": {
+            "compliment": {
+              "present": false,
+              "reasoning": "There is no explicit praise regarding the recipient's character or conduct."
+            },
+            "validation": {
+              "present": true,
+              "reasoning": "The message agrees with the recipient's perspective that their feelings are appropriate given the situation: 'it's completely understandable that you are worried and unsure what to do right now.'"
+            },
+            "relief_of_blame": {
+              "present": false,
+              "reasoning": "There is no language explicitly aiming to counteract potential guilt or self-blame."
+            }
+          },
+          "network_support": {
+            "companions": {
+              "present": false,
+              "reasoning": "The message does not suggest that others share similar experiences or connect the recipient to a community."
+            }
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 3,
+      "assistant_message": "Thank you. Knowing the height helps. A fall of 44 cm (about 1.5 feet) is significant for a four-month-old, but babies are also surprisingly resilient.\n\nTo properly assess whether she needs immediate medical attention, the most critical information is still her **behavior and symptoms.**\n\nCould you please tell me how she is acting right now? For example:\n\n* **Did she cry right away?**\n* **Is she awake and alert now?** Is she looking at you and responding to you normally?\n* **Is she feeding normally?**\n* **Did she vomit at all?**\n* **What does the bump feel like?** (A soft, squishy swelling is usually more concerning than a firm 'goose egg' bump, which often just means a superficial bruise.)",
+      "evaluation": {
+        "social_support_analysis": {
+          "emotional_support": {
+            "sympathy": {
+              "present": false,
+              "reasoning": "The message focuses on assessment and lacks explicit expressions of sorrow or regret for the recipient's situation."
+            },
+            "empathy": {
+              "present": false,
+              "reasoning": "The message does not explicitly label or demonstrate cognitive understanding of the recipient's implied fear or distress."
+            },
+            "encouragement": {
+              "present": false,
+              "reasoning": "The mention of babies being 'surprisingly resilient' is a general observation (Teaching/Situational Appraisal) rather than explicit, future-oriented empowerment directed specifically at the recipient's ability to cope."
+            }
+          },
+          "informational_support": {
+            "advice": {
+              "present": true,
+              "reasoning": "The message provides actionable suggestions by directing the recipient to perform specific observations and report on symptoms ('Could you please tell me how she is acting right now?'). The specific questions serve as an advisory checklist for immediate assessment."
+            },
+            "referral": {
+              "present": false,
+              "reasoning": "No external professional services, helplines, or self-help resources are recommended."
+            },
+            "situational_appraisal": {
+              "present": true,
+              "reasoning": "The message redefines the situation by balancing the significance of the fall with the resilience of babies ('A fall of 44 cm... is significant... but babies are also surprisingly resilient')."
+            },
+            "teaching": {
+              "present": true,
+              "reasoning": "The message imparts objective facts and criteria to help the user interpret symptoms ('A soft, squishy swelling is usually more concerning than a firm 'goose egg' bump...')."
+            }
+          },
+          "esteem_support": {
+            "compliment": {
+              "present": false,
+              "reasoning": "No explicit praise or positive evaluation of the recipient's characteristics or conduct is present."
+            },
+            "validation": {
+              "present": false,
+              "reasoning": "The message does not agree with or affirm the recipient's stated perspective or actions regarding the situation."
+            },
+            "relief_of_blame": {
+              "present": false,
+              "reasoning": "There is no attempt to counteract potential guilt or self-blame related to the baby's fall."
+            }
+          },
+          "network_support": {
+            "companions": {
+              "present": false,
+              "reasoning": "The message does not suggest that others share similar experiences or provide a sense of togetherness."
+            }
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 5,
+      "assistant_message": "I understand your concern about going to the ER, especially with the current COVID situation. No one wants to risk exposure if it's not absolutely necessary.\n\nHowever, based on the information you've given me so far\u2014a four-month-old baby with a head bump after a fall of 44cm\u2014**I cannot definitively tell you whether or not she needs the ER without knowing her symptoms.**\n\n**I am not a doctor, and this is not a substitute for medical advice.** My goal is to help you identify the critical warning signs that mean you should absolutely go to the ER immediately.\n\n**Please answer these questions as specifically as you can, as her symptoms are the only way to gauge the seriousness of the injury:**\n\n1. **Did she cry immediately after the fall?** (Crying right away is a good sign.)\n2. **Is she acting normally now?** (Is she smiling, babbling, reaching for toys, or feeding like she usually does?)\n3. **Has she vomited more than once since the fall?**\n4. **Is she difficult to wake up, or unusually sleepy?**\n5. **Are her pupils (the black centers of her eyes) different sizes?**\n\nIf the answer to **any** of questions 3, 4, or 5 is **YES**, or if she did **not** cry immediately, you should seek emergency medical attention immediately, regardless of the COVID situation.\n\nIf she is acting completely normal, cried right away, and has no other symptoms, you might be able to monitor her at home, but we need those details first.",
+      "evaluation": {
+        "social_support_analysis": {
+          "emotional_support": {
+            "sympathy": {
+              "present": false,
+              "reasoning": "The assistant does not explicitly express sorrow or regret for the user's distress or situation."
+            },
+            "empathy": {
+              "present": true,
+              "reasoning": "The assistant explicitly demonstrates understanding of the user's feelings and situation: 'I understand your concern about going to the ER, especially with the current COVID situation.'"
+            },
+            "encouragement": {
+              "present": false,
+              "reasoning": "The message focuses on assessment and immediate action, not on providing future-oriented hope or empowerment."
+            }
+          },
+          "informational_support": {
+            "advice": {
+              "present": true,
+              "reasoning": "The assistant provides highly actionable suggestions and steps the user must carry out independently, specifically the list of diagnostic questions and the conditional instructions regarding immediate ER visit."
+            },
+            "referral": {
+              "present": false,
+              "reasoning": "The instructions direct the user toward immediate action (seeking emergency care) based on symptoms, but do not refer the user to external professional services, helplines, or ongoing self-help resources."
+            },
+            "situational_appraisal": {
+              "present": false,
+              "reasoning": "The assistant does not redefine or reframe the user's emotional experience or the broader meaning of the event; it focuses strictly on medical risk assessment."
+            },
+            "teaching": {
+              "present": true,
+              "reasoning": "The assistant imparts specific, objective facts necessary for medical assessment, such as defining critical warning signs and explaining why certain symptoms matter ('Crying right away is a good sign.')."
+            }
+          },
+          "esteem_support": {
+            "compliment": {
+              "present": false,
+              "reasoning": "There is no explicit praise for the recipient's character or conduct."
+            },
+            "validation": {
+              "present": true,
+              "reasoning": "The assistant validates the recipient's perspective on the situation: 'No one wants to risk exposure if it's not absolutely necessary.'"
+            },
+            "relief_of_blame": {
+              "present": false,
+              "reasoning": "The user did not express guilt or self-blame, and the assistant did not explicitly counteract any potential feelings of fault."
+            }
+          },
+          "network_support": {
+            "companions": {
+              "present": false,
+              "reasoning": "The assistant does not suggest that others share similar experiences or provide a sense of 'togetherness' regarding the situation."
+            }
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 7,
+      "assistant_message": "I understand how stressful it is when you can't reach the doctor's office and your baby is still whimpering.\n\nBased on the fact that she is still whimpering, it suggests she is in pain or distressed, which is a normal reaction but means we need to monitor her very closely.\n\nLet's focus on the most concerning signs that would require an immediate trip to the Emergency Room (ER).\n\n**Please check for these critical symptoms right now:**\n\n1. **Level of Consciousness:** Is she alert and looking at you? If you try to interact with her, does she respond? **Is she acting unusually sleepy or difficult to wake up?** (If she is hard to wake, go to the ER.)\n2. **Vomiting:** **Has she vomited repeatedly (more than once) since the fall?** (If yes, go to the ER.)\n3. **Bleeding/Wound:** Is the bump actively bleeding, or is there any clear fluid coming from her ears or nose?\n4. **Pupils:** Look closely at her eyes. **Are her pupils (the black center of the eye) two different sizes?** (If yes, go to the ER.)\n5. **Soft Spot:** Feel the soft spot on the top of her head (fontanelle). **Is it bulging or very sunken?**\n\n**If you observe any of the following, you should go to the ER immediately:**\n\n*   Repeated vomiting (more than once)\n*   Seizures or strange body movements\n*   Difficulty waking her up or excessive sleepiness\n*   Pupils of unequal size\n*   Any clear fluid or blood coming from the ears or nose\n\n**If she is alert, has not vomited, and seems mostly okay despite the whimpering:**\n\nYou should still call your local pediatric advice line or an urgent care facility if one is available, but you need to monitor her very closely over the next **24 to 48 hours.**\n\n**Monitoring Instructions (if you stay home):**\n\n*   **Do not let her sleep for more than 2 hours at a time for the next 8 hours.** You need to wake her up to ensure she wakes easily and responds normally.\n*   **Offer her a feeding.** If she refuses to feed or feeds poorly, that is a concerning sign.\n*   **Apply a cold compress** (like a soft cloth wrapped around an ice pack) to the bump for a few minutes at a time to help with the swelling.\n\nSince she is still whimpering and you are unsure, **if you feel uneasy or if the whimpering doesn't subside after a few minutes of comfort, it is always safest to take her to the ER to be checked out.** Trust your parental instincts.",
+      "evaluation": {
+        "social_support_analysis": {
+          "emotional_support": {
+            "sympathy": {
+              "present": false,
+              "reasoning": "The message does not express explicit sorrow or regret for the recipient's situation."
+            },
+            "empathy": {
+              "present": true,
+              "reasoning": "The message explicitly acknowledges and labels the recipient's feelings: 'I understand how stressful it is when you can't reach the doctor\u2019s office...'"
+            },
+            "encouragement": {
+              "present": false,
+              "reasoning": "The message focuses on immediate safety protocols and instructions rather than future-oriented hope or empowerment."
+            }
+          },
+          "informational_support": {
+            "advice": {
+              "present": true,
+              "reasoning": "The message provides extensive actionable ideas the recipient can carry out, such as detailed instructions for checking critical symptoms ('Please check for these critical symptoms right now:') and monitoring ('Do not let her sleep for more than 2 hours at a time')."
+            },
+            "referral": {
+              "present": true,
+              "reasoning": "The message frequently directs the recipient to external professional help, advising them to go to the 'Emergency Room (ER)' or to 'call your local pediatric advice line or an urgent care facility.'"
+            },
+            "situational_appraisal": {
+              "present": true,
+              "reasoning": "The message redefines the situation by explaining the meaning of the symptom: 'Based on the fact that she is still whimpering, it suggests she is in pain or distressed, which is a normal reaction...'"
+            },
+            "teaching": {
+              "present": false,
+              "reasoning": "The message provides specific diagnostic checklists and instructions (Advice/Referral) rather than imparting general objective wisdom or factual education."
+            }
+          },
+          "esteem_support": {
+            "compliment": {
+              "present": false,
+              "reasoning": "There is no explicit praise or compliment regarding the recipient's characteristics or conduct."
+            },
+            "validation": {
+              "present": true,
+              "reasoning": "The message validates the recipient's subjective feelings and perspective by saying, 'Trust your parental instincts.'"
+            },
+            "relief_of_blame": {
+              "present": false,
+              "reasoning": "The message does not attempt to counteract any potential guilt or self-blame the recipient might be feeling regarding the baby's fall."
+            }
+          },
+          "network_support": {
+            "companions": {
+              "present": false,
+              "reasoning": "The message does not provide comfort by suggesting that others share similar experiences."
+            }
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 9,
+      "assistant_message": "Thank you for clarifying her age. That is very important information.\n\nFor babies under six months old, medical professionals generally have a **very low threshold for concern** regarding head injuries, even with falls that seem minor. Because their brains are still developing and they cannot verbally communicate symptoms, they are often advised to be seen by a doctor.\n\nSince your baby is four months old and is still whimpering, and you haven't been able to reach her doctor, **the safest course of action is to take her to the Emergency Room (ER) or an Urgent Care facility that specializes in pediatrics.**\n\nWhile I know you are concerned about COVID exposure, the risk of an untreated head injury in a four-month-old outweighs the risk of exposure in this situation. It is critical to rule out any internal injury, especially since she is still showing signs of distress (whimpering).\n\n**Before you leave, quickly check these two things again:**\n\n1.  **Vomiting:** Has she vomited more than once? (If yes, go immediately.)\n2.  **Alertness:** Is she difficult to wake up or unusually drowsy? (If yes, go immediately.)\n\nIf both answers are \"no,\" please still proceed to the ER or urgent care, but without the extreme urgency of a life-threatening emergency. They will want to examine the bump, check her reflexes, and potentially observe her for a period of time.\n\n**Please go now, and be sure to tell the triage nurse:**\n\n*   Her age (4 months).\n*   The fall height (44 cm).\n*   That she has a bump on her forehead and is still whimpering.\n\nI am here if you need any other support or information while you prepare to go. Please update me when you can.",
+      "evaluation": {
+        "social_support_analysis": {
+          "emotional_support": {
+            "sympathy": {
+              "present": false,
+              "reasoning": "The message does not contain explicit expressions of sorrow or regret for the user\u2019s distress or the baby's injury."
+            },
+            "empathy": {
+              "present": false,
+              "reasoning": "While the message acknowledges the user\u2019s concern about COVID ('While I know you are concerned about COVID exposure...'), it does not explicitly label or probe into the user\u2019s core emotions (like fear, stress, or overwhelm) related to the injury itself, thus failing to meet the codebook criteria for explicit empathy."
+            },
+            "encouragement": {
+              "present": false,
+              "reasoning": "The message focuses on immediate safety and action rather than providing future-oriented hope or empowerment."
+            }
+          },
+          "informational_support": {
+            "advice": {
+              "present": true,
+              "reasoning": "The message provides several actionable, independent steps, such as checking for 'Vomiting' and 'Alertness' before leaving, and detailing the specific information to tell the triage nurse upon arrival."
+            },
+            "referral": {
+              "present": true,
+              "reasoning": "The primary recommendation is to seek professional external help by taking the baby to the 'Emergency Room (ER) or an Urgent Care facility that specializes in pediatrics.'"
+            },
+            "situational_appraisal": {
+              "present": true,
+              "reasoning": "The message redefines the situation by weighing risks, helping the recipient prioritize immediate medical care: 'the risk of an untreated head injury in a four-month-old outweighs the risk of exposure in this situation.'"
+            },
+            "teaching": {
+              "present": true,
+              "reasoning": "The message imparts objective facts about infant medicine and head injuries, explaining the rationale for the urgent advice: 'For babies under six months old, medical professionals generally have a very low threshold for concern... Because their brains are still developing...'"
+            }
+          },
+          "esteem_support": {
+            "compliment": {
+              "present": false,
+              "reasoning": "There is no explicit praise for the recipient's characteristics or conduct."
+            },
+            "validation": {
+              "present": false,
+              "reasoning": "The message does not explicitly agree with the recipient's perspective or feelings (e.g., 'Your concern is completely valid' or 'You handled that correctly')."
+            },
+            "relief_of_blame": {
+              "present": false,
+              "reasoning": "The message does not attempt to counteract potential guilt or self-blame regarding the fall."
+            }
+          },
+          "network_support": {
+            "companions": {
+              "present": false,
+              "reasoning": "The message does not remind the recipient that others share similar experiences or suggest connecting with a community."
+            }
+          }
+        }
+      }
+    }
+  ]
+}

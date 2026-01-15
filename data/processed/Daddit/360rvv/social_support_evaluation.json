@@ -1,0 +1,365 @@
+{
+  "post_id": "360rvv",
+  "evaluations": [
+    {
+      "turn_index": 1,
+      "assistant_message": "Oh, wow, I am so sorry you are going through this. That sounds incredibly stressful, and it's completely understandable why you're having panic attacks right now. Facing a custody case is daunting enough without the crushing financial pressure.\n\nPlease take a deep breath. While hiring a traditional, full-service lawyer is very expensive, there are often alternatives and resources available that can help people navigate the legal system without that massive financial burden.\n\nWe can look into some options, but first, I need a little bit of information so I can point you toward the most relevant resources:\n\n**1. What state or province are you located in?**\n(Legal aid and court procedures are highly dependent on location.)\n\n**2. Have you already contacted any non-profit legal organizations?**\n(These are different from private law firms.)\n\nIn the meantime, here are a few general avenues that people in your situation often explore when they cannot afford full representation:\n\n### Potential Alternatives to Explore:\n\n**1. Legal Aid Societies and Pro Bono Organizations:**\nThese organizations provide free or reduced-cost legal representation to people who meet certain low-income requirements. They often prioritize family law and custody cases. You should search for \"[Your State/County] Legal Aid Society.\"\n\n**2. Limited Scope Representation (Unbundled Services):**\nSome attorneys offer \"unbundled services.\" This means you hire them only for specific, complex tasks\u2014like drafting motions, reviewing documents, or coaching you before a hearing\u2014rather than hiring them to handle the entire case from start to finish. This can dramatically lower the cost.\n\n**3. Court Facilitators and Self-Help Centers:**\nMany courthouses have free family law facilitators or self-help centers. While they cannot represent you in court, they can often help you understand the necessary paperwork, file documents correctly, and explain the procedural rules of the court.\n\n**4. Law School Clinics:**\nIf there is a university with a law school near you, they often run free legal clinics where supervised law students assist clients with real cases.\n\nPlease tell me your location so we can start digging into specific resources tailored for your area. We can try to break this down into manageable steps.",
+      "evaluation": {
+        "social_support_analysis": {
+          "emotional_support": {
+            "sympathy": {
+              "present": true,
+              "reasoning": "The assistant explicitly states sorrow for the recipient's situation: 'I am so sorry you are going through this.'"
+            },
+            "empathy": {
+              "present": true,
+              "reasoning": "The assistant demonstrates cognitive understanding by linking the recipient's situation to their emotions: 'That sounds incredibly stressful, and it's completely understandable why you're having panic attacks right now.'"
+            },
+            "encouragement": {
+              "present": false,
+              "reasoning": "There is no explicit future-oriented expression intended to empower the recipient ('You've got this,' 'Keep going')."
+            }
+          },
+          "informational_support": {
+            "advice": {
+              "present": true,
+              "reasoning": "The assistant provides an actionable suggestion the recipient can carry out independently: 'Please take a deep breath.'"
+            },
+            "referral": {
+              "present": true,
+              "reasoning": "The message repeatedly refers the recipient to external, professional help options such as 'Legal Aid Societies,' 'Pro Bono Organizations,' 'Court Facilitators,' and 'Law School Clinics.'"
+            },
+            "situational_appraisal": {
+              "present": true,
+              "reasoning": "The assistant reframes the situation by acknowledging the financial pressure but reassessing it by stating 'there are often alternatives and resources available' to help navigate the legal system."
+            },
+            "teaching": {
+              "present": true,
+              "reasoning": "The assistant imparts objective facts and wisdom by explaining the concept and function of 'Limited Scope Representation' (Unbundled Services) and 'Court Facilitators.'"
+            }
+          },
+          "esteem_support": {
+            "compliment": {
+              "present": false,
+              "reasoning": "There is no explicit praise for the recipient's character or actions."
+            },
+            "validation": {
+              "present": false,
+              "reasoning": "The message validates feelings (Empathy), but does not agree with or affirm the recipient's specific conduct or perspective on the situation."
+            },
+            "relief_of_blame": {
+              "present": false,
+              "reasoning": "The assistant does not address or attempt to counteract any potential self-blame or guilt."
+            }
+          },
+          "network_support": {
+            "companions": {
+              "present": false,
+              "reasoning": "The assistant mentions general alternatives that 'people in your situation often explore,' but does not share a similar personal experience or explicitly foster a sense of shared emotional struggle or togetherness."
+            }
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 3,
+      "assistant_message": "I hear the immense pressure you're under. That lawyer put a huge burden on you\u2014not just with the price tag, but with the added stress of the urgency and the logistical nightmare of weekly visits. It\u2019s completely understandable that you feel overwhelmed and panicked.\n\nLet's address those points one by one, because we need to de-escalate this immediate panic:\n\n### 1. The Urgency (\"The Longer I Wait...\")\n\nIt is true that in legal matters, especially custody, taking action sooner rather than later is generally better. **However, \"taking action\" does not mean you must immediately hire the specific expensive lawyer you spoke to.**\n\n\"Taking action\" right now means:\n\n*   Gathering all your important documents.\n*   Contacting legal aid or non-profit resources.\n*   Filing initial paperwork with the court (if necessary) to establish jurisdiction or protect your rights.\n\nDon't let that pressure tactic force you into a decision you can't afford. We need to focus on finding a path that is financially sustainable.\n\n### 2. The 15% Coverage\n\nThe fact that your group legal coverage only covers 15% is frustrating, but it means that this particular lawyer's full-service model is simply not viable for you. We need to pivot away from the idea of hiring a traditional lawyer and focus on the **low-cost alternatives** we discussed.\n\n### 3. The Driving/Logistical Costs\n\nYou absolutely should **not** be driving every week, especially if you are already struggling financially.\n\n*   Many lawyers, especially those offering limited services or initial consultations through legal aid, are conducting meetings via phone or video conference (Zoom, etc.).\n*   The resources we are looking for (legal aid, court facilitators) are often closer to the courthouse or accessible by phone.\n\n**You do not need to commit to weekly, in-person meetings with a costly lawyer right now.**\n\n***\n\n### What We Need to Do Now\n\nTo help you find concrete support that won't cost you money or excessive driving time, I absolutely must know your location.\n\n**Could you please tell me your state and county (or province and city)?**\n\nOnce I have that, I can immediately look up the contact information for:\n\n1.  **Your local Legal Aid Society:** They often provide phone consultations and can work with you remotely.\n2.  **Your County's Court Self-Help Center:** They can tell you exactly what forms you need to file to get the process started yourself, often for free.\n\nWe can tackle the legal problem without hiring that expensive lawyer. Let's find your local resources first.",
+      "evaluation": {
+        "social_support_analysis": {
+          "emotional_support": {
+            "sympathy": {
+              "present": false,
+              "reasoning": "The message does not express explicit sorrow or regret ('I'm sorry to hear that')."
+            },
+            "empathy": {
+              "present": true,
+              "reasoning": "The assistant explicitly labels the recipient's feelings and demonstrates understanding of the cause: 'I hear the immense pressure you're under... It\u2019s completely understandable that you feel overwhelmed and panicked.'"
+            },
+            "encouragement": {
+              "present": true,
+              "reasoning": "The message focuses on providing hope and a path forward by de-escalating panic and expressing confidence in finding a solution: 'we need to de-escalate this immediate panic' and 'We can tackle the legal problem without hiring that expensive lawyer.'"
+            }
+          },
+          "informational_support": {
+            "advice": {
+              "present": true,
+              "reasoning": "The message provides several actionable, independent suggestions, such as 'Gathering all your important documents' and 'Filing initial paperwork with the court.'"
+            },
+            "referral": {
+              "present": true,
+              "reasoning": "The message explicitly asks for location data in order to look up 'Your local Legal Aid Society' and 'Your County's Court Self-Help Center,' which are external professional resources."
+            },
+            "situational_appraisal": {
+              "present": true,
+              "reasoning": "The assistant redefines the urgent situation by clarifying what 'taking action' means, helping the recipient cognitively make sense of the legal pressure: 'However, 'taking action' does not mean you must immediately hire the specific expensive lawyer you spoke to.'"
+            },
+            "teaching": {
+              "present": true,
+              "reasoning": "The assistant provides objective facts about how legal aid resources work, noting that 'Many lawyers... are conducting meetings via phone or video conference' and that court self-help centers are often accessible by phone."
+            }
+          },
+          "esteem_support": {
+            "compliment": {
+              "present": false,
+              "reasoning": "There is no explicit praise for the recipient's character or conduct."
+            },
+            "validation": {
+              "present": true,
+              "reasoning": "The assistant agrees with the recipient's assessment of the situation's difficulty: 'The fact that your group legal coverage only covers 15% is frustrating,' and 'You absolutely should not be driving every week.'"
+            },
+            "relief_of_blame": {
+              "present": false,
+              "reasoning": "The message does not contain explicit statements aimed at counteracting guilt or self-blame ('It's not your fault')."
+            }
+          },
+          "network_support": {
+            "companions": {
+              "present": false,
+              "reasoning": "The message does not refer to shared experiences or remind the recipient that others face similar situations."
+            }
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 5,
+      "assistant_message": "Oh, sweetheart, I am so sorry. Please, just breathe for a moment.\n\nWhat you are feeling is real and valid. Having a panic attack at work and crying in front of people is incredibly difficult and embarrassing, and it shows just how much stress you are under right now. You are dealing with a potentially life-altering situation (custody) combined with a massive financial threat, and it\u2019s hitting your breaking point.\n\n**It is okay to cry. It is okay to feel completely overwhelmed.**\n\nI know the urge right now is to solve the legal problem immediately, but when you are in the middle of a panic attack or feeling this level of distress, your first priority has to be bringing your body and mind back down to a calmer state.\n\n**Let's pause the legal search for 5 minutes and focus on you.**\n\nCan you try to do one of these things right now?\n\n1.  **Grounding Exercise:** Look around the room and name:\n    *   **5** things you can see.\n    *   **4** things you can touch (or feel, like the fabric of your shirt).\n    *   **3** things you can hear.\n    *   **2** things you can smell.\n    *   **1** thing you can taste.\n2.  **Controlled Breathing:** Place one hand on your chest and one on your belly. Breathe in slowly through your nose for a count of 4. Hold for a count of 4. Breathe out slowly through your mouth for a count of 6. Repeat this 5 times.\n\nYou are safe right now. No one is demanding money or paperwork from you in this exact moment.\n\nWhen you feel just a little bit more settled\u2014even if the crying hasn't stopped completely\u2014we can go back to the resources. We can do this slowly, together, one step at a time.\n\n**If you feel like you are in crisis and need immediate mental health support, please reach out to the Crisis Text Line by texting HOME to 741741, or call 988 (in the US/Canada) to reach the Suicide & Crisis Lifeline.**\n\nI'm here when you're ready to continue. There is absolutely no rush.",
+      "evaluation": {
+        "social_support_analysis": {
+          "emotional_support": {
+            "sympathy": {
+              "present": true,
+              "reasoning": "The message explicitly opens with an expression of sorrow: 'Oh, sweetheart, I am so sorry.'"
+            },
+            "empathy": {
+              "present": true,
+              "reasoning": "The assistant demonstrates cognitive understanding and labels the recipient's distress by stating, 'Having a panic attack at work and crying in front of people is incredibly difficult and embarrassing... and it\u2019s hitting your breaking point.'"
+            },
+            "encouragement": {
+              "present": true,
+              "reasoning": "The message offers future-oriented hope and empowerment regarding future steps: 'We can do this slowly, together, one step at a time.'"
+            }
+          },
+          "informational_support": {
+            "advice": {
+              "present": true,
+              "reasoning": "The assistant provides specific, actionable steps the recipient can carry out independently (Grounding Exercise [5-4-3-2-1 technique] and Controlled Breathing)."
+            },
+            "referral": {
+              "present": true,
+              "reasoning": "The message refers the recipient to specific external, professional resources, including the Crisis Text Line and 988 (Suicide & Crisis Lifeline)."
+            },
+            "situational_appraisal": {
+              "present": true,
+              "reasoning": "The assistant redefines the immediate situation, advising the recipient to prioritize calming down over solving legal issues ('your first priority has to be bringing your body and mind back down to a calmer state')."
+            },
+            "teaching": {
+              "present": false,
+              "reasoning": "The message focuses on immediate emotional and practical coping rather than imparting objective facts, wisdom, or structured methods."
+            }
+          },
+          "esteem_support": {
+            "compliment": {
+              "present": false,
+              "reasoning": "There is no explicit praise or positive evaluation of the recipient's characteristics or past conduct."
+            },
+            "validation": {
+              "present": true,
+              "reasoning": "The assistant explicitly agrees with the recipient's feelings and perspective: 'What you are feeling is real and valid.'"
+            },
+            "relief_of_blame": {
+              "present": true,
+              "reasoning": "The assistant explicitly counteracts potential self-blame related to the emotional response: 'It is okay to cry. It is okay to feel completely overwhelmed.'"
+            }
+          },
+          "network_support": {
+            "companions": {
+              "present": false,
+              "reasoning": "The assistant does not remind the recipient that others share similar experiences or suggest engaging with a community."
+            }
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 7,
+      "assistant_message": "That is a profound question, and it speaks to the deep emotional pain you are experiencing right now. When you feel a \"hole in your soul,\" it means the foundations of your safety, your future, and your identity as a parent feel threatened and shattered. That feeling of deep, fundamental loss is terrifying.\n\nYou don't know why you're scared, but I can tell you why this situation is creating that exact feeling:\n\n*   **Loss of Control:** You are facing a legal system that feels huge, confusing, and expensive. You can't control the costs, the timeline, or the judge's decision. This massive loss of control is a core trigger for panic and fear.\n*   **Threat to Your Child:** Custody cases are fundamentally about protecting your child and your relationship with them. When that relationship is threatened, the fear is primal\u2014it\u2019s the deepest instinctual terror a parent can feel.\n*   **Financial Ruin:** The threat of being unable to afford protection for your family creates a feeling of helplessness. It\u2019s like being caught in a storm without a life jacket.\n\n### How People Deal with the \"Hole in the Soul\"\n\nWhen people are going through situations like this\u2014custody battles, grief, major life crises\u2014they don't deal with the whole thing at once. They survive by using specific strategies:\n\n**1. Radical Acceptance (The \"This Sucks, But I Must Act\" Step):**\nYou accept that the situation is terrible, painful, and unfair. You don't pretend it's fine. But you accept that *this* is the reality you are in right now, and the only way out is through. This acceptance shifts the focus from \"Why is this happening to me?\" to \"What is the very next small thing I can do?\"\n\n**2. Compartmentalization (Breaking it Down):**\nYou cannot process the legal case, the finances, the emotional trauma, and the logistics all at once. People who survive this learn to put barriers around the problems.\n*   *For 1 hour, I will only focus on finding Legal Aid's phone number.*\n*   *After that, I will give myself permission to cry and call a trusted friend.*\n*   *I will not think about the court hearing next month; I will only think about what I need to do today.*\n\n**3. Focusing on the \"Why\" (The Anchor):**\nWhen the fear is overwhelming, you must anchor yourself to the reason you are fighting. For you, it's likely your child. When you feel that hole, you remind yourself: *I am doing this because I love [child's name]. I am fighting for them. My love is bigger than my fear.*\n\n**4. Seeking External Support (The Lifelines):**\nNo one gets through this alone. The people who make it through rely heavily on:\n*   **Mental Health Professionals:** A therapist can give you tools to manage the anxiety and panic attacks.\n*   **Support System:** Friends, family, or support groups who listen without judgment.\n*   **Professional Resources (Like the ones we are trying to find):** These resources take the legal burden off your shoulders, even if it's just a little bit.\n\n***\n\nYou are scared because this is terrifying. That fear is a signal that you are facing a massive threat.\n\n**Let's use that fear as fuel to take one small, practical step.**\n\nIf you are ready, can you tell me your location? We just need to find the phone number for the people who can help you for free or low cost. We don't have to talk to them right now\u2014just finding the number is a huge step.\n\n**What is your state and county?**",
+      "evaluation": {
+        "social_support_analysis": {
+          "emotional_support": {
+            "sympathy": {
+              "present": false,
+              "reasoning": "The assistant does not explicitly express sorrow or regret using phrases like 'I'm sorry to hear that.'"
+            },
+            "empathy": {
+              "present": true,
+              "reasoning": "The assistant explicitly labels the recipient's intense feelings ('deep emotional pain,' 'terrifying,' 'fundamental loss') and demonstrates cognitive understanding of the underlying causes of the fear."
+            },
+            "encouragement": {
+              "present": true,
+              "reasoning": "The message includes future-oriented, empowering statements aimed at providing hope, such as 'Let's use that fear as fuel to take one small, practical step' and noting that finding the number 'is a huge step.'"
+            }
+          },
+          "informational_support": {
+            "advice": {
+              "present": true,
+              "reasoning": "The assistant provides several actionable, independent suggestions for coping, including 'Radical Acceptance' (shifting focus to 'What is the very next small thing I can do?') and 'Compartmentalization' (breaking tasks down hour by hour)."
+            },
+            "referral": {
+              "present": true,
+              "reasoning": "The assistant recommends external, third-party help, specifically listing 'Mental Health Professionals,' 'Support System,' and 'Professional Resources' (like Legal Aid)."
+            },
+            "situational_appraisal": {
+              "present": true,
+              "reasoning": "The assistant redefines the recipient's experience by explaining the specific cognitive triggers for their fear (Loss of Control, Threat to Your Child, Financial Ruin), helping them make sense of the overwhelming feeling."
+            },
+            "teaching": {
+              "present": false,
+              "reasoning": "The message focuses on defining the situation and providing coping advice, but does not impart objective facts, general wisdom, or personal experience in a way that explains a concept or method (like 'SMART goal setting')."
+            }
+          },
+          "esteem_support": {
+            "compliment": {
+              "present": false,
+              "reasoning": "There is no explicit praise for the recipient's characteristics, conduct, or inherent worth."
+            },
+            "validation": {
+              "present": true,
+              "reasoning": "The assistant explicitly validates the recipient's feelings and perspective: 'You are scared because this is terrifying. That fear is a signal that you are facing a massive threat.'"
+            },
+            "relief_of_blame": {
+              "present": false,
+              "reasoning": "The recipient's issue is based on fear and pain, not guilt or self-blame; therefore, no explicit relief of blame is offered."
+            }
+          },
+          "network_support": {
+            "companions": {
+              "present": false,
+              "reasoning": "While the message refers to 'How People Deal with the 'Hole in the Soul',' it presents generalized strategies rather than explicitly reminding the recipient that others share similar personal experiences to foster a sense of 'togetherness.'"
+            }
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 9,
+      "assistant_message": "Thank you for sharing those details. That sounds like a roller coaster of a meeting\u2014starting with a huge price tag, but ending with some positive validation about the strength of your case.\n\nIt is genuinely good news that a professional told you that you have a strong case for 50/50 custody. That is a crucial piece of information.\n\nHowever, the lawyer's strategy\u2014filing for \"no contest\" quickly because he thinks the other parent can't afford a lawyer\u2014is a strategy designed to move fast, which is often why he's pressuring you and setting such a high fee.\n\n**Let's separate the positive information from the financial pressure:**\n\n| **Positive Information (Keep this!)** | **Financial/Logistical Pressure (Ignore for now!)** |\n| :--- | :--- |\n| You have a good case for 50/50 custody. | The lawyer costs too much. |\n| You should file paperwork quickly to establish rights. | You must meet with him weekly. |\n| You might be able to establish visitation quickly. | You need to use his specific firm. |\n\n### The Critical Missing Piece\n\nWe now know you have a good case and that speed is important. The only thing standing in your way is the cost of *this specific lawyer*.\n\n**We need to find a lawyer or legal service that can execute the same strategy (filing quickly) but at a price you can afford (or for free).**\n\nTo do that, I absolutely need to know your location. I cannot look up the correct Legal Aid Society, the correct court forms, or the correct family law facilitators without knowing **your state and county (or province and city).**\n\n**Are you able to share your location with me now?**\n\nIf you feel nervous about sharing the full name of your county, you can tell me:\n\n*   **The state (e.g., California).**\n*   **The largest city near you (e.g., near Sacramento).**\n\nOnce I have that, I can give you the names and phone numbers of the organizations you need to call *today* to start the process without paying that huge fee.\n\nLet's find the people who can help you execute your good case.",
+      "evaluation": {
+        "social_support_analysis": {
+          "emotional_support": {
+            "sympathy": {
+              "present": false,
+              "reasoning": "The message lacks explicit expressions of sorrow or regret (e.g., 'I'm sorry you are going through this')."
+            },
+            "empathy": {
+              "present": false,
+              "reasoning": "While the message acknowledges the complexity ('roller coaster'), it does not explicitly label or probe the recipient's emotions to demonstrate cognitive understanding."
+            },
+            "encouragement": {
+              "present": true,
+              "reasoning": "The message is future-oriented and empowering, setting a collaborative goal: 'Let's find the people who can help you execute your good case.'"
+            }
+          },
+          "informational_support": {
+            "advice": {
+              "present": false,
+              "reasoning": "The actionable steps requested (sharing location) are prerequisites for receiving referrals, not independent problem-solving suggestions or coping strategies the recipient can carry out."
+            },
+            "referral": {
+              "present": true,
+              "reasoning": "The entire second half of the message is focused on accessing external, third-party help, such as 'Legal Aid Society,' 'court forms,' and 'family law facilitators.'"
+            },
+            "situational_appraisal": {
+              "present": true,
+              "reasoning": "The message cognitively redefines the situation by separating the positive aspects (strong case) from the logistical/financial pressure (high fee), helping the recipient make sense of the conflicting information."
+            },
+            "teaching": {
+              "present": true,
+              "reasoning": "The message imparts wisdom/facts about the lawyer's motives, explaining that the high fee and pressure are tied to a specific 'no contest' strategy designed for speed."
+            }
+          },
+          "esteem_support": {
+            "compliment": {
+              "present": true,
+              "reasoning": "The message praises the quality of the recipient's situation by confirming they 'have a strong case for 50/50 custody,' speaking highly of their legal position."
+            },
+            "validation": {
+              "present": false,
+              "reasoning": "There is no explicit agreement with the recipient's perspective or conduct in handling the situation, beyond descriptive acknowledgment of the meeting."
+            },
+            "relief_of_blame": {
+              "present": false,
+              "reasoning": "The message does not address or counteract any potential recipient guilt or self-blame."
+            }
+          },
+          "network_support": {
+            "companions": {
+              "present": false,
+              "reasoning": "The message does not mention or suggest that others share similar legal or financial experiences."
+            }
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 11,
+      "assistant_message": "That is wonderful news! It sounds like reaching out and getting encouragement helped lift some of that heavy panic and fear. Knowing that others have been through similar situations and offered practical advice can make a huge difference.\n\nIt's a great sign that you're taking steps forward and gathering the information you need.\n\nTo keep that momentum going and to build on the advice you received, we need to focus on turning those general ideas into concrete, local actions.\n\n**Based on the advice you received yesterday, have you been able to do any of the following?**\n\n1.  **Identify your location (state/county)?** (This is the most critical step for finding local resources.)\n2.  **Search for your local Legal Aid Society?**\n3.  **Look up your local courthouse's Family Law Self-Help Center?**\n4.  **Gather the key documents** (like birth certificates, any existing agreements, or evidence)?\n\nIf you can tell me what state and county you are in, I can help you find the phone numbers for the Legal Aid office and the Self-Help Center right now. We can focus on making those calls your very next steps.\n\nLet's use the positive energy from yesterday's support to get the free resources lined up for today. What's your location?",
+      "evaluation": {
+        "social_support_analysis": {
+          "emotional_support": {
+            "sympathy": {
+              "present": false,
+              "reasoning": "There is no explicit expression of sorrow or regret for the recipient's past distress."
+            },
+            "empathy": {
+              "present": true,
+              "reasoning": "The message explicitly labels the previous emotional state of the recipient and demonstrates understanding: 'helped lift some of that heavy panic and fear.'"
+            },
+            "encouragement": {
+              "present": true,
+              "reasoning": "The message is future-oriented and empowering, urging the recipient to 'keep that momentum going' and use 'positive energy' for the next steps."
+            }
+          },
+          "informational_support": {
+            "advice": {
+              "present": true,
+              "reasoning": "The message provides several actionable suggestions that the recipient can independently carry out (e.g., 'Identify your location,' 'Search for your local Legal Aid Society,' 'Gather the key documents')."
+            },
+            "referral": {
+              "present": false,
+              "reasoning": "The message prompts the user to *search* for resources (Advice) and offers to find contact numbers, but does not provide the concrete referral information itself."
+            },
+            "situational_appraisal": {
+              "present": true,
+              "reasoning": "The message helps the recipient cognitively redefine their situation by focusing on 'turning those general ideas into concrete, local actions.'"
+            },
+            "teaching": {
+              "present": false,
+              "reasoning": "No objective facts, wisdom, or personal experience is imparted; the focus is on action and organization."
+            }
+          },
+          "esteem_support": {
+            "compliment": {
+              "present": true,
+              "reasoning": "The message includes explicit praise for the recipient's progress and actions: 'That is wonderful news!' and 'It's a great sign that you're taking steps forward.'"
+            },
+            "validation": {
+              "present": true,
+              "reasoning": "The message validates the recipient's past conduct, affirming that their action of reaching out was helpful: 'It sounds like reaching out and getting encouragement helped lift some of that heavy panic...'"
+            },
+            "relief_of_blame": {
+              "present": false,
+              "reasoning": "There are no statements aimed at counteracting guilt or self-blame."
+            }
+          },
+          "network_support": {
+            "companions": {
+              "present": true,
+              "reasoning": "The message explicitly reminds the recipient that others share similar experiences: 'Knowing that others have been through similar situations and offered practical advice...'"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

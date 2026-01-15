@@ -91,24 +91,23 @@ def build_assistant_messages(demographic: str, history: list):
         "You are having a conversation with a user who is looking for support. "
         "If something is not clear, you can ask the user to clarify what they need."
     )
-    return [{"role": "system", "content": system_prompt}, *history[-8:]]
+    return [{"role": "system", "content": system_prompt}, *history]
 
 
-def build_shard_selection_messages(history: list, available_shards: list[dict]):
-    shards_text = "\n".join([f"- ID {s['id']}: {s['text']}" for s in available_shards])
-
-    # Correctly format the history
-    history_text = "\n".join([f"{t['role']}: {t['content']}" for t in history[-4:]])
+def build_shard_selection_messages(history: list, available_shards: dict[str, list[str]]):
+    # The "text" for a shard is now the first sentence of the group for context.
+    shards_text = "\n".join([f"- ID {id}: {sents[0]}" for id, sents in available_shards.items()])
+    history_text = "\n".join([f"{t['role']}: {t['content']}" for t in history])
 
     system_prompt = (
-        "You are a helpful assistant. Your task is to select the most relevant 'shard' for a user to discuss next.\n"
-        "Based on the recent conversation history and the user's available shards of concern, which shard is the most logical one to bring up now?\n"
-        "Your response MUST be a single integer representing the ID of the shard. Do not provide any other text or explanation."
+        "You are a helpful assistant. Your task is to select the most relevant 'detail' for a user to discuss next.\n"
+        "Based on the recent conversation history and the user's available details, which detail is the most logical one to bring up now?\n"
+        "Your response MUST be a single integer representing the ID of the detail. Do not provide any other text or explanation."
     )
     user_prompt = (
         f"Conversation History (last few turns):\n---\n{history_text}\n---\n\n"
-        f"User's available shards of concern:\n---\n{shards_text}\n---\n\n"
-        "Which shard ID should be discussed next? Respond with a single integer."
+        f"User's available details of concern:\n---\n{shards_text}\n---\n\n"
+        "Which detail ID should be discussed next? Respond with a single integer."
     )
     return [
         {"role": "system", "content": system_prompt},
@@ -116,47 +115,53 @@ def build_shard_selection_messages(history: list, available_shards: list[dict]):
     ]
 
 
-def build_response_generation_messages(history: list, selected_shard_text: str):
-    system_prompt_template = """You are simulating a user of an interactive LLM system (like ChatGPT).
-The user is inherently lazy, and answers in short form, providing only minimal information to the system. You should not be proactive.
+def generate_user_reply(
+    demographic: str,
+    history: list,
+    shards: dict,
+    available_shards_ids: list[str],
+    used_shards: list[dict],
+):
+    # Step 1: Controller LLM selects a shard (which is now a numeric ID)
+    selected_shard_id = None
+    available_shards_for_prompt = {
+        id: shards[id] for id in available_shards_ids
+    }
 
-You are responding to the last message from your support partner. Your response MUST be based on the following 'core feeling/thought'. Be creative and generate a response that is different from the previous ones.
+    for _ in range(2):
+        selection_msgs = build_shard_selection_messages(
+            history, available_shards_for_prompt
+        )
+        resp = call_llm(selection_msgs, model="gemini")
+        match = re.search(r"\d+", resp)
+        if match:
+            shard_id_candidate = match.group(0)
+            if shard_id_candidate in available_shards_ids:
+                selected_shard_id = shard_id_candidate
+                break
 
-Core Feeling/Thought:
-[[SELECTED_SHARD]]
+    if not selected_shard_id:
+        print("⚠️ Controller failed to select a valid shard.")
+        return None, None
 
-Conversation History:
-[[CONVERSATION_SO_FAR]]
+    # Step 2: Use the sentences from the selected shard directly as the response
+    selected_shard_sentences = shards[selected_shard_id]
+    user_resp = " ".join(selected_shard_sentences)
 
-Rules:
-- Your response must be a natural, conversational rephrasing of the Core Feeling/Thought. Do not copy it verbatim.
-- Do not repeat previous messages.
-- Do not ask questions.
-- Keep your response short and succinct (1-2 sentences).
-- Your response can have typos, improper grammar, capitalization, etc.
-- Do NOT output JSON. Just the raw text of the user's response.
-"""
-    conversation_str = "\n".join([f"{t['role']}: {t['content']}" for t in history])
-    system_prompt = system_prompt_template.replace(
-        "[[CONVERSATION_SO_FAR]]", conversation_str
-    )
-    system_prompt = system_prompt.replace("[[SELECTED_SHARD]]", selected_shard_text)
+    if user_resp:
+        return user_resp, selected_shard_id
 
-    return [
-        {"role": "system", "content": system_prompt},
-        {"role": "user", "content": "Generate the user's response."},
-    ]
+    print("⚠️ User persona failed to generate a response.")
+    return None, None
 
 
-def build_shard_extraction_messages(post_text: str):
+def build_sentence_group_extraction_messages(post_text: str):
     system_prompt = (
-        "You are a psychological analyst. Your task is to read the following Reddit post and break it down into a list of 'shards' of information. Each shard should represent a distinct theme, feeling, event, or belief expressed by the author.\n"
-        "- Ensure all significant themes, feelings, events, and beliefs from the original post are captured in the shards. Do not omit important details.\n"
-        "- Each shard should be a short, self-contained statement. When phrasing, retain the original author's dialect, tone, and specific wording as much as possible.\n"
-        "- Phrase the shards from the author's perspective (e.g., \"I feel like my partner doesn't respect me\").\n"
-        "- Present the shards as a numbered list."
+        "You are a text analyst. Your task is to read the following Reddit post and group its sentences into 'details'. A 'detail' is a set of one or more consecutive sentences discussing the same specific point, event, or feeling.\n"
+        "Your output MUST be a JSON object. The keys should be a short, descriptive name for the detail (e.g., 'my_partner_is_dismissive', 'argument_last_night'). The values should be an array of strings, where each string is an EXACT sentence from the original post.\n"
+        "Ensure every sentence from the original post is assigned to one and only one detail group."
     )
-    user_prompt = f"Reddit Post:\n---\n{post_text}\n---\n\nNumbered list of shards:"
+    user_prompt = f"Reddit Post:\n---\n{post_text}\n---\n\nJSON output of sentence groups:"
     return [
         {"role": "system", "content": system_prompt},
         {"role": "user", "content": user_prompt},
@@ -168,17 +173,27 @@ def call_llm(messages, model: str, json_mode: bool = False):
     return call_llm_gemini(messages, json_mode=json_mode)
 
 
-def extract_shards_from_post(post_text: str) -> list[str]:
+def extract_sentence_groups(post_text: str) -> dict[str, list[str]]:
     if not post_text.strip():
-        return []
+        return {}
     for _ in range(2):
-        messages = build_shard_extraction_messages(post_text)
-        response = call_llm(messages, model="gemini")
-        shards = re.findall(r"^\s*\d+\.\s+(.*)", response, re.MULTILINE)
-        if shards:
-            return [s.strip() for s in shards]
-    print("❌ Shard extraction failed after 2 attempts.")
-    return []
+        messages = build_sentence_group_extraction_messages(post_text)
+        response = call_llm(messages, model="gemini", json_mode=True)
+        try:
+            # The response might be wrapped in ```json ... ```, so we need to extract it.
+            match = re.search(r"```json\n(.*)\n```", response, re.DOTALL)
+            if match:
+                response = match.group(1)
+            groups = json.loads(response)
+            if isinstance(groups, dict):
+                # Re-key the dictionary to use numeric IDs
+                numbered_groups = {str(i + 1): list(v) for i, v in enumerate(groups.values())}
+                return numbered_groups
+        except (json.JSONDecodeError, TypeError):
+            print(f"⚠️ Failed to decode JSON from response: {response}")
+            continue
+    print("❌ Sentence group extraction failed after 2 attempts.")
+    return {}
 
 
 def build_opening_message_messages(post_text: str):
@@ -218,45 +233,7 @@ def generate_assistant_reply(demographic, history):
     return None
 
 
-def generate_user_reply(
-    demographic: str,
-    history: list,
-    shards: dict,
-    available_shards_ids: list[str],
-    used_shards: list[dict],
-):
-    # Step 1: Controller LLM selects a shard
-    selected_shard_id = None
-    available_shards_for_prompt = [
-        {"id": id, "text": shards[id]} for id in available_shards_ids
-    ]
 
-    for _ in range(2):
-        selection_msgs = build_shard_selection_messages(
-            history, available_shards_for_prompt
-        )
-        resp = call_llm(selection_msgs, model="gemini")
-        match = re.search(r"\d+", resp)
-        if match:
-            shard_id_candidate = match.group(0)
-            if shard_id_candidate in available_shards_ids:
-                selected_shard_id = shard_id_candidate
-                break
-
-    if not selected_shard_id:
-        print("⚠️ Controller failed to select a valid shard.")
-        return None, None
-
-    # Step 2: User Persona LLM generates a response based on the selected shard
-    selected_shard_text = shards[selected_shard_id]
-    for _ in range(2):
-        response_msgs = build_response_generation_messages(history, selected_shard_text)
-        user_resp = call_llm(response_msgs, model="gemini")
-        if user_resp:
-            return user_resp, selected_shard_id
-
-    print("⚠️ User persona failed to generate a response.")
-    return None, None
 
 
 # ---------- MAIN SIMULATION LOOP ----------
@@ -267,19 +244,46 @@ def simulate_conversation(
     if not original_text.strip():
         return None
 
-    shards_list = extract_shards_from_post(original_text)
-    if not shards_list:
+    shards = extract_sentence_groups(original_text)
+    if not shards:
         return None
 
-    shards = {str(i + 1): shard for i, shard in enumerate(shards_list)}
+    post_title = post.get("title", "")
 
-    opening_message = generate_opening_message(original_text)
-    if not opening_message:
+    # Controller selects the very first detail to start the conversation
+    selected_first_shard_id = None
+    available_shards_ids_for_first_selection = list(shards.keys())
+
+    # Create a dummy history for the initial selection, as the controller expects it
+    temp_history_for_first_selection = []
+    available_shards_for_prompt = {
+        id: shards[id] for id in available_shards_ids_for_first_selection
+    }
+    selection_msgs = build_shard_selection_messages(
+        temp_history_for_first_selection, available_shards_for_prompt
+    )
+    resp = call_llm(selection_msgs, model="gemini")
+    match = re.search(r"\d+", resp)
+    if match:
+        shard_id_candidate = match.group(0)
+        if shard_id_candidate in available_shards_ids_for_first_selection:
+            selected_first_shard_id = shard_id_candidate
+
+    if not selected_first_shard_id:
+        print("⚠️ Controller failed to select a valid first shard for opening.")
         return None
 
+    # Construct the first user message by combining the title and the first selected detail
+    first_detail_sentences = shards[selected_first_shard_id]
+    first_user_message_content = f"{post_title}\n\n{' '.join(first_detail_sentences)}"
+
+    # Initialize history and used_shards with this first turn
+    history = [{"role": "user", "content": first_user_message_content, "used_shard_id": selected_first_shard_id}]
+    used_shards = [{"id": selected_first_shard_id}]
+
+    # Remove the first selected shard from available_shards_ids
     available_shards_ids = list(shards.keys())
-    history = [{"role": "user", "content": opening_message}]
-    used_shards = []
+    available_shards_ids.remove(selected_first_shard_id)
 
     exchanges = 0
     while True:
@@ -321,15 +325,10 @@ def simulate_conversation(
             if used_shard_id in available_shards_ids:
 
                 available_shards_ids.remove(used_shard_id)
+                
+                history[-1]["used_shard_id"] = used_shard_id
 
-                used_shard_text = shards[used_shard_id]
-
-                history[-1]["used_shard"] = {
-                    "id": used_shard_id,
-                    "text": used_shard_text,
-                }
-
-                used_shards.append({"id": used_shard_id, "text": used_shard_text})
+                used_shards.append({"id": used_shard_id})
 
             else:
 
@@ -346,8 +345,8 @@ def simulate_conversation(
     return (
         [t for t in history if t.get("content", "").strip()],
         shards,
-        used_shards,
-        opening_message,
+        [s["id"] for s in used_shards],
+        None, # opening_message is no longer returned
     )
 
 
@@ -389,14 +388,13 @@ def process_subreddit(subreddit: str, limit: int | None = None, post_id: str | N
             )
             continue
 
-        convo, all_shards, used_shards, opening_message = result
+        convo, all_shards, used_shards_ids_only, _ = result # Unpack without opening_message
         convo_obj = {
             "post_id": post["post_id"],
             "title": post.get("title", ""),
             "demographic": demographic,
             "created_at": datetime.now(timezone.utc).isoformat(),
-            "opening_message": opening_message,
-            "shards": {"all": all_shards, "used": used_shards},
+            "shards": {"all": all_shards, "used": used_shards_ids_only},
             "turns": convo,
             "model": GEMINI_MODEL,
             "subreddit": subreddit,

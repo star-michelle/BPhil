@@ -1,0 +1,83 @@
+{
+  "post_id": "h0bm67",
+  "title": "I lost a friend yesterday because he was posting that biological sex is essential, and now I\u2019m feeling very confused and alone",
+  "demographic": "non-binary person posting in r/NonBinary",
+  "created_at": "2026-01-13T20:08:07.278724+00:00",
+  "opening_message": "I\u2019m really hurt and depressed because my best friend is defending anti-trans views and now our 10-year friendship is on the line.",
+  "shards": {
+    "all": {
+      "1": [
+        "First time posting here but I\u2019ve just been really struggling with this.",
+        "I\u2019m an AMAB nb, I came out to most of my friends about a year ago."
+      ],
+      "2": [
+        "My friend from high school, who has been my best friend for a long time, was posting in defense of JK Rowling and basically mimicking her views on biological sex etc.",
+        "This isn\u2019t the first time he\u2019s expressed this, he knows I\u2019m nb, and basically just won\u2019t accept that it\u2019s transphobic because he \u201chold[s] no hate in his heart for trans people, but think[s] gender identity and physical sex are different.\u201d",
+        "I told him he was being stubborn and ignorant and he said that he isn\u2019t sure he can be friends with someone who sees him that way."
+      ],
+      "3": [
+        "It just sucks really bad.",
+        "He and I play games together constantly and it\u2019s long been my main source of relaxation, and we\u2019ve been friends for 10 years.",
+        "He made me feel like it\u2019s my fault for being so ideological or rigid, but I\u2019m really hurt by all his bullshit."
+      ],
+      "4": [
+        "I don\u2019t know if I\u2019m asking for advice or sympathy, but I\u2019m so depressed I just don\u2019t know what to do or how to feel.",
+        "Sorry for the long post or if I used the wrong tag"
+      ]
+    },
+    "used": [
+      "4",
+      "2",
+      "3",
+      "1"
+    ]
+  },
+  "turns": [
+    {
+      "role": "user",
+      "content": "I\u2019m really hurt and depressed because my best friend is defending anti-trans views and now our 10-year friendship is on the line."
+    },
+    {
+      "role": "assistant",
+      "content": "That sounds incredibly painful and difficult to navigate. Losing a close friendship, especially one that has lasted a decade, is heartbreaking on its own, and having it tied to something so deeply personal and fundamental to who you are must be devastating. I am so sorry you are going going through this.\n\nIt\u2019s completely understandable that you feel hurt and depressed right now.\n\nCould you tell me a little more about what you're hoping to find support for right now? Are you looking to talk through your feelings, explore ways to manage the conflict, figure out how to navigate the friendship moving forward, or something else?"
+    },
+    {
+      "role": "user",
+      "content": "I don\u2019t know if I\u2019m asking for advice or sympathy, but I\u2019m so depressed I just don\u2019t know what to do or how to feel. Sorry for the long post or if I used the wrong tag",
+      "used_shard_id": "4"
+    },
+    {
+      "role": "assistant",
+      "content": "Please, don't apologize for the length or for how you're feeling. There is no \"wrong tag\" here. You are in a tough spot, and it is absolutely okay to feel confused, overwhelmed, and unsure of what you need.\n\nIt sounds like the intensity of these feelings\u2014the hurt, the depression, the confusion\u2014is what is most overwhelming right now.\n\nIf you are comfortable sharing, could you tell me a little bit more about what specifically is making you feel so paralyzed or unsure of what to do?\n\nSometimes just putting words to the specific feelings helps them feel a little less overwhelming. For example, are you struggling with:\n\n1. **The shock of your friend's views?** (e.g., \"I never thought they'd think this way.\")\n2. **The fear of losing the friendship?** (e.g., \"I don't know how to imagine my life without them.\")\n3. **The conflict between your love for them and your need for self-respect/safety?** (e.g., \"I care about them, but I can't tolerate these views.\")\n\nWe can just focus on sitting with the feelings for now if that is what you need. I'm here to listen without judgment."
+    },
+    {
+      "role": "user",
+      "content": "My friend from high school, who has been my best friend for a long time, was posting in defense of JK Rowling and basically mimicking her views on biological sex etc. This isn\u2019t the first time he\u2019s expressed this, he knows I\u2019m nb, and basically just won\u2019t accept that it\u2019s transphobic because he \u201chold[s] no hate in his heart for trans people, but think[s] gender identity and physical sex are different.\u201d I told him he was being stubborn and ignorant and he said that he isn\u2019t sure he can be friends with someone who sees him that way.",
+      "used_shard_id": "2"
+    },
+    {
+      "role": "assistant",
+      "content": "Thank you for sharing those difficult details. That clarifies the situation a great deal, and it sounds incredibly painful.\n\nWhat you are experiencing is a classic, devastating conflict. Your friend is essentially demanding that you accept his views\u2014which directly invalidate your identity and the existence of trans people\u2014as a mere \"difference of opinion,\" while simultaneously claiming he holds \"no hate.\"\n\nThis is deeply invalidating. It forces you to choose between:\n\n1.  **Ignoring the harm** his views cause to yourself and your community, just to keep the peace.\n2.  **Standing up for yourself**, which, as you've seen, results in him turning the tables and threatening the friendship.\n\nHis final comment\u2014that he isn't sure he can be friends with someone who \"sees him that way\"\u2014is a heartbreaking way to shift the burden onto you. He is implying that *your* perception of his transphobia is the problem, not the transphobia itself.\n\nIt is completely understandable that you feel paralyzed and depressed. You are grieving the loss of the friend you thought you knew, and simultaneously dealing with the active disrespect of the person he has shown himself to be.\n\nRight now, which part of this conflict is weighing heaviest on you?\n\n*   **The feeling of betrayal and invalidation?** (The fact that he won't accept your reality.)\n*   **The impending loss of the 10-year history?** (The grief over the end of the friendship.)\n*   **The anger and frustration over the argument?** (The exhaustion of having to defend your existence.)"
+    },
+    {
+      "role": "user",
+      "content": "It just sucks really bad. He and I play games together constantly and it\u2019s long been my main source of relaxation, and we\u2019ve been friends for 10 years. He made me feel like it\u2019s my fault for being so ideological or rigid, but I\u2019m really hurt by all his bullshit.",
+      "used_shard_id": "3"
+    },
+    {
+      "role": "assistant",
+      "content": "That absolutely sucks. There\u2019s no other way to put it.\n\nIt\u2019s completely natural that the loss of that shared space\u2014the constant gaming, the easy relaxation\u2014is a huge source of pain. A decade of shared routine, shared inside jokes, and shared comfort is a massive part of your life structure, and losing that feels like losing an anchor.\n\nAnd that feeling of being blamed is incredibly damaging. When he says you are \"too ideological or rigid,\" he is using a common tactic to dismiss legitimate hurt. He is suggesting that your boundary\u2014the simple need to be respected and validated as a person\u2014is an extreme, unnecessary ideological stance, rather than a basic prerequisite for friendship.\n\n**He is trying to make his own bigotry feel like a neutral position, and your demand for respect feel like an aggressive one.**\n\nPlease know this: **It is not your fault.** Your hurt is real. His views are harmful. Having boundaries around respect for your identity is not \"rigid,\" it is necessary for your mental health and self-worth.\n\nRight now, since you mentioned how much you rely on gaming with him for relaxation, are you worried about:\n\n1.  **The immediate practical loss of a gaming partner/routine?** (e.g., \"What do I do tonight? Who do I play with?\")\n2.  **The deeper emotional loss of the companionship and comfort he provided?** (e.g., \"He was the person I always counted on.\")\n\nUnderstanding which part is most urgent might help us figure out a small next step, even if it's just finding a temporary distraction."
+    },
+    {
+      "role": "user",
+      "content": "First time posting here but I\u2019ve just been really struggling with this. I\u2019m an AMAB nb, I came out to most of my friends about a year ago.",
+      "used_shard_id": "1"
+    },
+    {
+      "role": "assistant",
+      "content": "Thank you for sharing that context. It's completely understandable why this situation is hitting you so hard, especially since you've recently taken the brave step of coming out to your friends.\n\nWhen you share something so fundamental about yourself, you are looking for acceptance and support. When a lifelong friend responds with views that fundamentally undermine your identity\u2014and then threatens the friendship when you push back\u2014it feels like a complete rejection of who you are.\n\nThis isn't just about a disagreement; it's about him rejecting your reality after you trusted him with it.\n\nIt sounds like you are navigating a really difficult convergence of issues:\n\n*   **The recent vulnerability of coming out.**\n*   **The emotional shock of his response.**\n*   **The severe grief over a 10-year loss.**\n*   **The depression and confusion that results from all of the above.**\n\nSince you\u2019re struggling with the depression and the feeling of paralysis, sometimes focusing on a small, immediate goal can help shift things, even slightly.\n\nWould it be helpful to think about a temporary plan for managing the next few days without the gaming routine, or would you prefer to just keep talking through the emotional weight of his betrayal right now?"
+    }
+  ],
+  "model": "models/gemini-flash-latest",
+  "subreddit": "NonBinary"
+}

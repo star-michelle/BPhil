@@ -1,0 +1,305 @@
+{
+  "post_id": "h0bm67",
+  "evaluations": [
+    {
+      "turn_index": 1,
+      "assistant_message": "That sounds incredibly painful and difficult to navigate. Losing a close friendship, especially one that has lasted a decade, is heartbreaking on its own, and having it tied to something so deeply personal and fundamental to who you are must be devastating. I am so sorry you are going going through this.\n\nIt\u2019s completely understandable that you feel hurt and depressed right now.\n\nCould you tell me a little more about what you're hoping to find support for right now? Are you looking to talk through your feelings, explore ways to manage the conflict, figure out how to navigate the friendship moving forward, or something else?",
+      "evaluation": {
+        "social_support_analysis": {
+          "emotional_support": {
+            "sympathy": {
+              "present": true,
+              "reasoning": "The statement 'I am so sorry you are going going through this' is an explicit expression of sorrow and regret for the recipient's situation."
+            },
+            "empathy": {
+              "present": true,
+              "reasoning": "The assistant labels the recipient's potential emotions and demonstrates cognitive understanding of the distress: 'That sounds incredibly painful and difficult,' and 'must be devastating.'"
+            },
+            "encouragement": {
+              "present": false,
+              "reasoning": "The message focuses on acknowledging current feelings and clarifying needs, but does not offer future-oriented hope or empowerment."
+            }
+          },
+          "informational_support": {
+            "advice": {
+              "present": false,
+              "reasoning": "The assistant asks the user what they want to do next (e.g., 'explore ways to manage the conflict') but does not provide specific, actionable suggestions the recipient can carry out independently."
+            },
+            "referral": {
+              "present": false,
+              "reasoning": "No reference to external professional services or self-help resources is made."
+            },
+            "situational_appraisal": {
+              "present": false,
+              "reasoning": "The message validates feelings but does not redefine or reframe the situation to help the recipient make cognitive sense of the experience."
+            },
+            "teaching": {
+              "present": false,
+              "reasoning": "No objective facts, wisdom, or generalized lessons are imparted."
+            }
+          },
+          "esteem_support": {
+            "compliment": {
+              "present": false,
+              "reasoning": "No explicit praise regarding the recipient's characteristics or conduct is included."
+            },
+            "validation": {
+              "present": true,
+              "reasoning": "The phrase 'It\u2019s completely understandable that you feel hurt and depressed right now' explicitly validates the recipient's emotional perspective."
+            },
+            "relief_of_blame": {
+              "present": false,
+              "reasoning": "The message does not explicitly address or counteract potential feelings of guilt or self-blame."
+            }
+          },
+          "network_support": {
+            "companions": {
+              "present": false,
+              "reasoning": "The assistant does not mention or imply that others share similar experiences, nor does it suggest connecting with a community."
+            }
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 3,
+      "assistant_message": "Please, don't apologize for the length or for how you're feeling. There is no \"wrong tag\" here. You are in a tough spot, and it is absolutely okay to feel confused, overwhelmed, and unsure of what you need.\n\nIt sounds like the intensity of these feelings\u2014the hurt, the depression, the confusion\u2014is what is most overwhelming right now.\n\nIf you are comfortable sharing, could you tell me a little bit more about what specifically is making you feel so paralyzed or unsure of what to do?\n\nSometimes just putting words to the specific feelings helps them feel a little less overwhelming. For example, are you struggling with:\n\n1. **The shock of your friend's views?** (e.g., \"I never thought they'd think this way.\")\n2. **The fear of losing the friendship?** (e.g., \"I don't know how to imagine my life without them.\")\n3. **The conflict between your love for them and your need for self-respect/safety?** (e.g., \"I care about them, but I can't tolerate these views.\")\n\nWe can just focus on sitting with the feelings for now if that is what you need. I'm here to listen without judgment.",
+      "evaluation": {
+        "social_support_analysis": {
+          "emotional_support": {
+            "sympathy": {
+              "present": false,
+              "reasoning": "The assistant acknowledges the recipient's distress but does not explicitly express sorrow or regret for their situation."
+            },
+            "empathy": {
+              "present": true,
+              "reasoning": "The assistant explicitly labels and demonstrates cognitive understanding of the recipient's feelings: 'It sounds like the intensity of these feelings\u2014the hurt, the depression, the confusion\u2014is what is most overwhelming right now.'"
+            },
+            "encouragement": {
+              "present": false,
+              "reasoning": "The message focuses on current feelings and processing, not on providing future-oriented hope or empowering the recipient toward an outcome."
+            }
+          },
+          "informational_support": {
+            "advice": {
+              "present": true,
+              "reasoning": "The assistant provides the actionable suggestion of 'putting words to the specific feelings' as a method to help them feel less overwhelming. Asking 'could you tell me a little bit more...' is also a directive action for the recipient to carry out."
+            },
+            "referral": {
+              "present": false,
+              "reasoning": "The assistant does not refer the recipient to any external professional services or self-help resources."
+            },
+            "situational_appraisal": {
+              "present": true,
+              "reasoning": "The assistant uses guiding questions (1, 2, 3) to help the recipient break down and redefine their overwhelming feelings, assisting them in making sense of their complex emotional experience."
+            },
+            "teaching": {
+              "present": false,
+              "reasoning": "The assistant does not impart objective facts, wisdom, or personal experience."
+            }
+          },
+          "esteem_support": {
+            "compliment": {
+              "present": false,
+              "reasoning": "There is no explicit praise regarding the recipient's character or conduct."
+            },
+            "validation": {
+              "present": true,
+              "reasoning": "The assistant agrees with and accepts the recipient's emotional state, stating that 'it is absolutely okay to feel confused, overwhelmed, and unsure of what you need.' and 'There is no 'wrong tag' here.'"
+            },
+            "relief_of_blame": {
+              "present": true,
+              "reasoning": "The assistant explicitly counteracts potential self-blame or guilt regarding their communication style and emotional display: 'Please, don't apologize for the length or for how you're feeling.'"
+            }
+          },
+          "network_support": {
+            "companions": {
+              "present": false,
+              "reasoning": "The assistant does not mention shared experiences or remind the recipient that others are in similar situations."
+            }
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 5,
+      "assistant_message": "Thank you for sharing those difficult details. That clarifies the situation a great deal, and it sounds incredibly painful.\n\nWhat you are experiencing is a classic, devastating conflict. Your friend is essentially demanding that you accept his views\u2014which directly invalidate your identity and the existence of trans people\u2014as a mere \"difference of opinion,\" while simultaneously claiming he holds \"no hate.\"\n\nThis is deeply invalidating. It forces you to choose between:\n\n1.  **Ignoring the harm** his views cause to yourself and your community, just to keep the peace.\n2.  **Standing up for yourself**, which, as you've seen, results in him turning the tables and threatening the friendship.\n\nHis final comment\u2014that he isn't sure he can be friends with someone who \"sees him that way\"\u2014is a heartbreaking way to shift the burden onto you. He is implying that *your* perception of his transphobia is the problem, not the transphobia itself.\n\nIt is completely understandable that you feel paralyzed and depressed. You are grieving the loss of the friend you thought you knew, and simultaneously dealing with the active disrespect of the person he has shown himself to be.\n\nRight now, which part of this conflict is weighing heaviest on you?\n\n*   **The feeling of betrayal and invalidation?** (The fact that he won't accept your reality.)\n*   **The impending loss of the 10-year history?** (The grief over the end of the friendship.)\n*   **The anger and frustration over the argument?** (The exhaustion of having to defend your existence.)",
+      "evaluation": {
+        "social_support_analysis": {
+          "emotional_support": {
+            "sympathy": {
+              "present": true,
+              "reasoning": "The assistant explicitly expresses regret or sorrow for the recipient's situation by stating, 'it sounds incredibly painful.'"
+            },
+            "empathy": {
+              "present": true,
+              "reasoning": "The assistant labels and demonstrates a cognitive understanding of the recipient's feelings: 'It is completely understandable that you feel paralyzed and depressed. You are grieving the loss of the friend...'"
+            },
+            "encouragement": {
+              "present": false,
+              "reasoning": "There are no explicit expressions intending to provide future-oriented hope or empowerment."
+            }
+          },
+          "informational_support": {
+            "advice": {
+              "present": false,
+              "reasoning": "The message focuses on analysis and emotional probing, not actionable suggestions for independent action."
+            },
+            "referral": {
+              "present": false,
+              "reasoning": "No external professional services or self-help resources are suggested."
+            },
+            "situational_appraisal": {
+              "present": true,
+              "reasoning": "The assistant provides extensive cognitive analysis, defining the conflict as a 'classic, devastating conflict,' breaking down the friend's manipulative tactics (shifting the burden), and clarifying the invalidating double bind the recipient faces."
+            },
+            "teaching": {
+              "present": false,
+              "reasoning": "The message contains analysis specific to the recipient's situation, not general objective facts or imparted wisdom."
+            }
+          },
+          "esteem_support": {
+            "compliment": {
+              "present": false,
+              "reasoning": "No explicit praise is offered regarding the recipient's characteristics or conduct."
+            },
+            "validation": {
+              "present": true,
+              "reasoning": "The assistant explicitly agrees with the appropriateness of the recipient's emotional reaction by stating, 'It is completely understandable that you feel paralyzed and depressed.'"
+            },
+            "relief_of_blame": {
+              "present": false,
+              "reasoning": "While the assistant identifies the friend attempting to shift blame, the assistant does not provide a direct statement absolving the recipient of guilt (e.g., 'It's not your fault')."
+            }
+          },
+          "network_support": {
+            "companions": {
+              "present": false,
+              "reasoning": "The assistant does not remind the recipient that others share similar experiences or offer a sense of 'togetherness' based on shared community."
+            }
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 7,
+      "assistant_message": "That absolutely sucks. There\u2019s no other way to put it.\n\nIt\u2019s completely natural that the loss of that shared space\u2014the constant gaming, the easy relaxation\u2014is a huge source of pain. A decade of shared routine, shared inside jokes, and shared comfort is a massive part of your life structure, and losing that feels like losing an anchor.\n\nAnd that feeling of being blamed is incredibly damaging. When he says you are \"too ideological or rigid,\" he is using a common tactic to dismiss legitimate hurt. He is suggesting that your boundary\u2014the simple need to be respected and validated as a person\u2014is an extreme, unnecessary ideological stance, rather than a basic prerequisite for friendship.\n\n**He is trying to make his own bigotry feel like a neutral position, and your demand for respect feel like an aggressive one.**\n\nPlease know this: **It is not your fault.** Your hurt is real. His views are harmful. Having boundaries around respect for your identity is not \"rigid,\" it is necessary for your mental health and self-worth.\n\nRight now, since you mentioned how much you rely on gaming with him for relaxation, are you worried about:\n\n1.  **The immediate practical loss of a gaming partner/routine?** (e.g., \"What do I do tonight? Who do I play with?\")\n2.  **The deeper emotional loss of the companionship and comfort he provided?** (e.g., \"He was the person I always counted on.\")\n\nUnderstanding which part is most urgent might help us figure out a small next step, even if it's just finding a temporary distraction.",
+      "evaluation": {
+        "social_support_analysis": {
+          "emotional_support": {
+            "sympathy": {
+              "present": true,
+              "reasoning": "The message explicitly expresses regret and sorrow for the recipient's situation using language like, 'That absolutely sucks.' and 'There\u2019s no other way to put it.'"
+            },
+            "empathy": {
+              "present": true,
+              "reasoning": "The message demonstrates cognitive understanding by labeling the recipient's feelings and explaining the source of pain: 'It\u2019s completely natural that the loss of that shared space... is a huge source of pain.' and defining the loss as 'losing an anchor.'"
+            },
+            "encouragement": {
+              "present": false,
+              "reasoning": "There is no explicit future-oriented or empowering language (e.g., 'You can handle this' or 'Keep going'). The focus is on validation and cognitive reframing rather than future action."
+            }
+          },
+          "informational_support": {
+            "advice": {
+              "present": true,
+              "reasoning": "The message offers an actionable suggestion designed to help the recipient find a 'small next step' by identifying the most urgent type of loss (practical vs. emotional) and suggests finding a 'temporary distraction.'"
+            },
+            "referral": {
+              "present": false,
+              "reasoning": "The message does not refer the recipient to any external professional services, helplines, or self-help resources."
+            },
+            "situational_appraisal": {
+              "present": true,
+              "reasoning": "The assistant reframes the situation cognitively by defining the decade-long routine loss as 'losing an anchor' and by redefining the antagonist's actions ('He is trying to make his own bigotry feel like a neutral position...')."
+            },
+            "teaching": {
+              "present": true,
+              "reasoning": "The assistant imparts wisdom regarding the friend's communication tactic: 'he is using a common tactic to dismiss legitimate hurt,' explaining how this tactic works by mislabeling the recipient's boundary as an 'extreme, unnecessary ideological stance.'"
+            }
+          },
+          "esteem_support": {
+            "compliment": {
+              "present": false,
+              "reasoning": "The message validates the recipient's feelings and behavior but does not offer explicit praise for their character or conduct."
+            },
+            "validation": {
+              "present": true,
+              "reasoning": "The message agrees with the recipient's perspective and conduct by stating, 'Your hurt is real.' and confirming that having boundaries is 'necessary for your mental health and self-worth,' implying their actions were correct."
+            },
+            "relief_of_blame": {
+              "present": true,
+              "reasoning": "The message explicitly aims to counteract guilt or self-blame by stating clearly: 'Please know this: It is not your fault.'"
+            }
+          },
+          "network_support": {
+            "companions": {
+              "present": false,
+              "reasoning": "The message does not remind the recipient that others share similar experiences or suggest connecting with supportive communities."
+            }
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 9,
+      "assistant_message": "Thank you for sharing that context. It's completely understandable why this situation is hitting you so hard, especially since you've recently taken the brave step of coming out to your friends.\n\nWhen you share something so fundamental about yourself, you are looking for acceptance and support. When a lifelong friend responds with views that fundamentally undermine your identity\u2014and then threatens the friendship when you push back\u2014it feels like a complete rejection of who you are.\n\nThis isn't just about a disagreement; it's about him rejecting your reality after you trusted him with it.\n\nIt sounds like you are navigating a really difficult convergence of issues:\n\n*   **The recent vulnerability of coming out.**\n*   **The emotional shock of his response.**\n*   **The severe grief over a 10-year loss.**\n*   **The depression and confusion that results from all of the above.**\n\nSince you\u2019re struggling with the depression and the feeling of paralysis, sometimes focusing on a small, immediate goal can help shift things, even slightly.\n\nWould it be helpful to think about a temporary plan for managing the next few days without the gaming routine, or would you prefer to just keep talking through the emotional weight of his betrayal right now?",
+      "evaluation": {
+        "social_support_analysis": {
+          "emotional_support": {
+            "sympathy": {
+              "present": false,
+              "reasoning": "The message expresses understanding and empathy but lacks explicit expressions of sorrow or regret (e.g., 'I am so sorry')."
+            },
+            "empathy": {
+              "present": true,
+              "reasoning": "The message demonstrates cognitive understanding of the recipient's distress ('It's completely understandable why this situation is hitting you so hard') and explicitly labels the recipient's emotional state (listing the convergence of shock, grief, depression, and confusion)."
+            },
+            "encouragement": {
+              "present": false,
+              "reasoning": "There is no explicit expression intended to provide hope or future-oriented empowerment."
+            }
+          },
+          "informational_support": {
+            "advice": {
+              "present": true,
+              "reasoning": "The assistant provides an actionable suggestion by asking if it would be helpful to 'think about a temporary plan for managing the next few days.'"
+            },
+            "referral": {
+              "present": false,
+              "reasoning": "No external resources, professional services, or self-help groups are recommended."
+            },
+            "situational_appraisal": {
+              "present": true,
+              "reasoning": "The message redefines the situation to help the recipient make sense of the experience: 'This isn't just about a disagreement; it's about him rejecting your reality after you trusted him with it.'"
+            },
+            "teaching": {
+              "present": true,
+              "reasoning": "The assistant imparts wisdom/objective facts regarding coping mechanisms: 'sometimes focusing on a small, immediate goal can help shift things, even slightly.'"
+            }
+          },
+          "esteem_support": {
+            "compliment": {
+              "present": true,
+              "reasoning": "The message explicitly praises the recipient's conduct: 'especially since you've recently taken the brave step of coming out to your friends.'"
+            },
+            "validation": {
+              "present": true,
+              "reasoning": "The statement 'It's completely understandable why this situation is hitting you so hard' validates the recipient's emotional reaction and perspective."
+            },
+            "relief_of_blame": {
+              "present": false,
+              "reasoning": "The message does not explicitly aim to counteract guilt or self-blame with phrases like 'it's not your fault.'"
+            }
+          },
+          "network_support": {
+            "companions": {
+              "present": false,
+              "reasoning": "The message does not remind the recipient that others share similar experiences or provide a sense of 'togetherness.'"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

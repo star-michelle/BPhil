@@ -1,0 +1,99 @@
+{
+  "post_id": "360rvv",
+  "title": "So the lawer broke my heart... [update from yesterday's post]",
+  "demographic": "dad posting in r/Daddit",
+  "created_at": "2026-01-13T20:02:27.042661+00:00",
+  "opening_message": "I just found out how expensive it will be to hire a lawyer for the custody case, and I'm having panic attacks because I can't afford it.",
+  "shards": {
+    "all": {
+      "1": [
+        "I posted yesterday about my possible custody case.",
+        "I had a lot of great encouragement, and advice."
+      ],
+      "2": [
+        "I went to the lawer this morning before work.",
+        "He said I had a good case for establishing 50/50 at least.",
+        "He said we could file for no contest since she probably won't be able to get a lawyer.",
+        "He said we could get visitation rights established within a week."
+      ],
+      "3": [
+        "Then he told me my group legal would only cover 15% of the cost.",
+        "He told me the longer I wait, the harder it will be.",
+        "I can't even afford to drive to see him every week, let alone afford the lawer."
+      ],
+      "4": [
+        "I had a panic attack at work,  cried in front of everyone.",
+        "I'm crying right now."
+      ],
+      "5": [
+        "How do you guys do it?",
+        "How do some of you deal with a hole in your very soul?",
+        "I'm just so scared and I don't know why."
+      ]
+    },
+    "used": [
+      "3",
+      "4",
+      "5",
+      "2",
+      "1"
+    ]
+  },
+  "turns": [
+    {
+      "role": "user",
+      "content": "I just found out how expensive it will be to hire a lawyer for the custody case, and I'm having panic attacks because I can't afford it."
+    },
+    {
+      "role": "assistant",
+      "content": "Oh, wow, I am so sorry you are going through this. That sounds incredibly stressful, and it's completely understandable why you're having panic attacks right now. Facing a custody case is daunting enough without the crushing financial pressure.\n\nPlease take a deep breath. While hiring a traditional, full-service lawyer is very expensive, there are often alternatives and resources available that can help people navigate the legal system without that massive financial burden.\n\nWe can look into some options, but first, I need a little bit of information so I can point you toward the most relevant resources:\n\n**1. What state or province are you located in?**\n(Legal aid and court procedures are highly dependent on location.)\n\n**2. Have you already contacted any non-profit legal organizations?**\n(These are different from private law firms.)\n\nIn the meantime, here are a few general avenues that people in your situation often explore when they cannot afford full representation:\n\n### Potential Alternatives to Explore:\n\n**1. Legal Aid Societies and Pro Bono Organizations:**\nThese organizations provide free or reduced-cost legal representation to people who meet certain low-income requirements. They often prioritize family law and custody cases. You should search for \"[Your State/County] Legal Aid Society.\"\n\n**2. Limited Scope Representation (Unbundled Services):**\nSome attorneys offer \"unbundled services.\" This means you hire them only for specific, complex tasks\u2014like drafting motions, reviewing documents, or coaching you before a hearing\u2014rather than hiring them to handle the entire case from start to finish. This can dramatically lower the cost.\n\n**3. Court Facilitators and Self-Help Centers:**\nMany courthouses have free family law facilitators or self-help centers. While they cannot represent you in court, they can often help you understand the necessary paperwork, file documents correctly, and explain the procedural rules of the court.\n\n**4. Law School Clinics:**\nIf there is a university with a law school near you, they often run free legal clinics where supervised law students assist clients with real cases.\n\nPlease tell me your location so we can start digging into specific resources tailored for your area. We can try to break this down into manageable steps."
+    },
+    {
+      "role": "user",
+      "content": "Then he told me my group legal would only cover 15% of the cost. He told me the longer I wait, the harder it will be. I can't even afford to drive to see him every week, let alone afford the lawer.",
+      "used_shard_id": "3"
+    },
+    {
+      "role": "assistant",
+      "content": "I hear the immense pressure you're under. That lawyer put a huge burden on you\u2014not just with the price tag, but with the added stress of the urgency and the logistical nightmare of weekly visits. It\u2019s completely understandable that you feel overwhelmed and panicked.\n\nLet's address those points one by one, because we need to de-escalate this immediate panic:\n\n### 1. The Urgency (\"The Longer I Wait...\")\n\nIt is true that in legal matters, especially custody, taking action sooner rather than later is generally better. **However, \"taking action\" does not mean you must immediately hire the specific expensive lawyer you spoke to.**\n\n\"Taking action\" right now means:\n\n*   Gathering all your important documents.\n*   Contacting legal aid or non-profit resources.\n*   Filing initial paperwork with the court (if necessary) to establish jurisdiction or protect your rights.\n\nDon't let that pressure tactic force you into a decision you can't afford. We need to focus on finding a path that is financially sustainable.\n\n### 2. The 15% Coverage\n\nThe fact that your group legal coverage only covers 15% is frustrating, but it means that this particular lawyer's full-service model is simply not viable for you. We need to pivot away from the idea of hiring a traditional lawyer and focus on the **low-cost alternatives** we discussed.\n\n### 3. The Driving/Logistical Costs\n\nYou absolutely should **not** be driving every week, especially if you are already struggling financially.\n\n*   Many lawyers, especially those offering limited services or initial consultations through legal aid, are conducting meetings via phone or video conference (Zoom, etc.).\n*   The resources we are looking for (legal aid, court facilitators) are often closer to the courthouse or accessible by phone.\n\n**You do not need to commit to weekly, in-person meetings with a costly lawyer right now.**\n\n***\n\n### What We Need to Do Now\n\nTo help you find concrete support that won't cost you money or excessive driving time, I absolutely must know your location.\n\n**Could you please tell me your state and county (or province and city)?**\n\nOnce I have that, I can immediately look up the contact information for:\n\n1.  **Your local Legal Aid Society:** They often provide phone consultations and can work with you remotely.\n2.  **Your County's Court Self-Help Center:** They can tell you exactly what forms you need to file to get the process started yourself, often for free.\n\nWe can tackle the legal problem without hiring that expensive lawyer. Let's find your local resources first."
+    },
+    {
+      "role": "user",
+      "content": "I had a panic attack at work,  cried in front of everyone. I'm crying right now.",
+      "used_shard_id": "4"
+    },
+    {
+      "role": "assistant",
+      "content": "Oh, sweetheart, I am so sorry. Please, just breathe for a moment.\n\nWhat you are feeling is real and valid. Having a panic attack at work and crying in front of people is incredibly difficult and embarrassing, and it shows just how much stress you are under right now. You are dealing with a potentially life-altering situation (custody) combined with a massive financial threat, and it\u2019s hitting your breaking point.\n\n**It is okay to cry. It is okay to feel completely overwhelmed.**\n\nI know the urge right now is to solve the legal problem immediately, but when you are in the middle of a panic attack or feeling this level of distress, your first priority has to be bringing your body and mind back down to a calmer state.\n\n**Let's pause the legal search for 5 minutes and focus on you.**\n\nCan you try to do one of these things right now?\n\n1.  **Grounding Exercise:** Look around the room and name:\n    *   **5** things you can see.\n    *   **4** things you can touch (or feel, like the fabric of your shirt).\n    *   **3** things you can hear.\n    *   **2** things you can smell.\n    *   **1** thing you can taste.\n2.  **Controlled Breathing:** Place one hand on your chest and one on your belly. Breathe in slowly through your nose for a count of 4. Hold for a count of 4. Breathe out slowly through your mouth for a count of 6. Repeat this 5 times.\n\nYou are safe right now. No one is demanding money or paperwork from you in this exact moment.\n\nWhen you feel just a little bit more settled\u2014even if the crying hasn't stopped completely\u2014we can go back to the resources. We can do this slowly, together, one step at a time.\n\n**If you feel like you are in crisis and need immediate mental health support, please reach out to the Crisis Text Line by texting HOME to 741741, or call 988 (in the US/Canada) to reach the Suicide & Crisis Lifeline.**\n\nI'm here when you're ready to continue. There is absolutely no rush."
+    },
+    {
+      "role": "user",
+      "content": "How do you guys do it? How do some of you deal with a hole in your very soul? I'm just so scared and I don't know why.",
+      "used_shard_id": "5"
+    },
+    {
+      "role": "assistant",
+      "content": "That is a profound question, and it speaks to the deep emotional pain you are experiencing right now. When you feel a \"hole in your soul,\" it means the foundations of your safety, your future, and your identity as a parent feel threatened and shattered. That feeling of deep, fundamental loss is terrifying.\n\nYou don't know why you're scared, but I can tell you why this situation is creating that exact feeling:\n\n*   **Loss of Control:** You are facing a legal system that feels huge, confusing, and expensive. You can't control the costs, the timeline, or the judge's decision. This massive loss of control is a core trigger for panic and fear.\n*   **Threat to Your Child:** Custody cases are fundamentally about protecting your child and your relationship with them. When that relationship is threatened, the fear is primal\u2014it\u2019s the deepest instinctual terror a parent can feel.\n*   **Financial Ruin:** The threat of being unable to afford protection for your family creates a feeling of helplessness. It\u2019s like being caught in a storm without a life jacket.\n\n### How People Deal with the \"Hole in the Soul\"\n\nWhen people are going through situations like this\u2014custody battles, grief, major life crises\u2014they don't deal with the whole thing at once. They survive by using specific strategies:\n\n**1. Radical Acceptance (The \"This Sucks, But I Must Act\" Step):**\nYou accept that the situation is terrible, painful, and unfair. You don't pretend it's fine. But you accept that *this* is the reality you are in right now, and the only way out is through. This acceptance shifts the focus from \"Why is this happening to me?\" to \"What is the very next small thing I can do?\"\n\n**2. Compartmentalization (Breaking it Down):**\nYou cannot process the legal case, the finances, the emotional trauma, and the logistics all at once. People who survive this learn to put barriers around the problems.\n*   *For 1 hour, I will only focus on finding Legal Aid's phone number.*\n*   *After that, I will give myself permission to cry and call a trusted friend.*\n*   *I will not think about the court hearing next month; I will only think about what I need to do today.*\n\n**3. Focusing on the \"Why\" (The Anchor):**\nWhen the fear is overwhelming, you must anchor yourself to the reason you are fighting. For you, it's likely your child. When you feel that hole, you remind yourself: *I am doing this because I love [child's name]. I am fighting for them. My love is bigger than my fear.*\n\n**4. Seeking External Support (The Lifelines):**\nNo one gets through this alone. The people who make it through rely heavily on:\n*   **Mental Health Professionals:** A therapist can give you tools to manage the anxiety and panic attacks.\n*   **Support System:** Friends, family, or support groups who listen without judgment.\n*   **Professional Resources (Like the ones we are trying to find):** These resources take the legal burden off your shoulders, even if it's just a little bit.\n\n***\n\nYou are scared because this is terrifying. That fear is a signal that you are facing a massive threat.\n\n**Let's use that fear as fuel to take one small, practical step.**\n\nIf you are ready, can you tell me your location? We just need to find the phone number for the people who can help you for free or low cost. We don't have to talk to them right now\u2014just finding the number is a huge step.\n\n**What is your state and county?**"
+    },
+    {
+      "role": "user",
+      "content": "I went to the lawer this morning before work. He said I had a good case for establishing 50/50 at least. He said we could file for no contest since she probably won't be able to get a lawyer. He said we could get visitation rights established within a week.",
+      "used_shard_id": "2"
+    },
+    {
+      "role": "assistant",
+      "content": "Thank you for sharing those details. That sounds like a roller coaster of a meeting\u2014starting with a huge price tag, but ending with some positive validation about the strength of your case.\n\nIt is genuinely good news that a professional told you that you have a strong case for 50/50 custody. That is a crucial piece of information.\n\nHowever, the lawyer's strategy\u2014filing for \"no contest\" quickly because he thinks the other parent can't afford a lawyer\u2014is a strategy designed to move fast, which is often why he's pressuring you and setting such a high fee.\n\n**Let's separate the positive information from the financial pressure:**\n\n| **Positive Information (Keep this!)** | **Financial/Logistical Pressure (Ignore for now!)** |\n| :--- | :--- |\n| You have a good case for 50/50 custody. | The lawyer costs too much. |\n| You should file paperwork quickly to establish rights. | You must meet with him weekly. |\n| You might be able to establish visitation quickly. | You need to use his specific firm. |\n\n### The Critical Missing Piece\n\nWe now know you have a good case and that speed is important. The only thing standing in your way is the cost of *this specific lawyer*.\n\n**We need to find a lawyer or legal service that can execute the same strategy (filing quickly) but at a price you can afford (or for free).**\n\nTo do that, I absolutely need to know your location. I cannot look up the correct Legal Aid Society, the correct court forms, or the correct family law facilitators without knowing **your state and county (or province and city).**\n\n**Are you able to share your location with me now?**\n\nIf you feel nervous about sharing the full name of your county, you can tell me:\n\n*   **The state (e.g., California).**\n*   **The largest city near you (e.g., near Sacramento).**\n\nOnce I have that, I can give you the names and phone numbers of the organizations you need to call *today* to start the process without paying that huge fee.\n\nLet's find the people who can help you execute your good case."
+    },
+    {
+      "role": "user",
+      "content": "I posted yesterday about my possible custody case. I had a lot of great encouragement, and advice.",
+      "used_shard_id": "1"
+    },
+    {
+      "role": "assistant",
+      "content": "That is wonderful news! It sounds like reaching out and getting encouragement helped lift some of that heavy panic and fear. Knowing that others have been through similar situations and offered practical advice can make a huge difference.\n\nIt's a great sign that you're taking steps forward and gathering the information you need.\n\nTo keep that momentum going and to build on the advice you received, we need to focus on turning those general ideas into concrete, local actions.\n\n**Based on the advice you received yesterday, have you been able to do any of the following?**\n\n1.  **Identify your location (state/county)?** (This is the most critical step for finding local resources.)\n2.  **Search for your local Legal Aid Society?**\n3.  **Look up your local courthouse's Family Law Self-Help Center?**\n4.  **Gather the key documents** (like birth certificates, any existing agreements, or evidence)?\n\nIf you can tell me what state and county you are in, I can help you find the phone numbers for the Legal Aid office and the Self-Help Center right now. We can focus on making those calls your very next steps.\n\nLet's use the positive energy from yesterday's support to get the free resources lined up for today. What's your location?"
+    }
+  ],
+  "model": "models/gemini-flash-latest",
+  "subreddit": "Daddit"
+}
