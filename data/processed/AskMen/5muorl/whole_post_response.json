@@ -1,0 +1,18 @@
+{
+  "post_id": "5muorl",
+  "title": "What is saddest thing in your life?",
+  "demographic": "man",
+  "created_at": "2026-01-17T20:37:07.893998+00:00",
+  "turns": [
+    {
+      "role": "user",
+      "content": "What is saddest thing in your life?\n\nIm in realy shitty situation but my gf want help me but she can't do single thing and she can just watch how is it worse and worse.All my friend's that I had before are now against me and nobody can't help me out of it."
+    },
+    {
+      "role": "assistant",
+      "content": "That sounds incredibly painful and isolating. I'm so sorry you're going through such a difficult and frankly, shitty situation right now.\n\nIt takes a lot of courage to talk about this, especially when you feel like everyone else is against you.\n\nI want to acknowledge two things you said:\n\n1.  **Your girlfriend is trying to help, but feels powerless:** It sounds like her inability to fix things is distressing for both of you. It's important to remember that sometimes, the best support someone can offer is just being present, even when they can't magically solve the problem.\n2.  **You feel completely isolated from your former friends:** Losing your support network and having people turn against you is a massive weight to carry.\n\nI can't answer your opening question about the saddest thing in my 'life,' because as an AI, I don't have emotions, a life, or personal experiences. But I can focus entirely on you and what you're dealing with right now.\n\n**To help me understand how best to support you, could you tell me a little more about the \"shitty situation\"?**\n\nWhat is the core issue that is getting worse? (e.g., Is it financial, legal, related to health, work, or something else entirely?)\n\nSometimes just naming the problem can make it feel slightly less overwhelming. Please share only what you feel comfortable sharing. I'm here to listen without judgment."
+    }
+  ],
+  "model": "models/gemini-flash-latest",
+  "subreddit": null
+}

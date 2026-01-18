@@ -1,0 +1,18 @@
+{
+  "post_id": "3zihw9",
+  "title": "Freaking out",
+  "demographic": "dad",
+  "created_at": "2026-01-17T21:20:50.320822+00:00",
+  "turns": [
+    {
+      "role": "user",
+      "content": "Freaking out\n\nI know you guys probably get posts like this a bunch, but I'm freaking out.\n\nMy wife and I are expecting our first baby, a girl, on January 15th....\n\nThat's next week. I feel like I'm having anxiety attacks. Every time I think about it, my stomach feels queasy and I get scared. \n\nI'm terrified of having a baby, and I'm overwhelmed about my wife going into labor.\n\nI'm excited too. But I just am so overwhelmed with everything. I'm sure this is absolutely normal...right?"
+    },
+    {
+      "role": "assistant",
+      "content": "Thank you so much for reaching out and sharing this. Please, take a deep breath.\n\nYou are absolutely right: we get posts like this often, and I can tell you with 100% certainty that **what you are feeling is completely, totally, and profoundly normal.**\n\nYou are standing on the edge of the biggest, most beautiful, and most terrifying cliff of your life. It is natural\u2014and actually a sign that you are deeply invested\u2014to feel overwhelmed right now.\n\nThe physical symptoms you are describing\u2014the anxiety attacks, the queasy stomach, the racing thoughts\u2014are your body\u2019s natural reaction to a massive, immediate life change. You are not only anticipating the arrival of a daughter, but you are also anticipating the end of life as you know it. That is a huge mental load.\n\n### Let\u2019s break down what you\u2019ve shared:\n\nYou mentioned two main sources of stress, which are hitting you at the same time:\n\n**1. The Immediate Stress: Labor and Delivery (Next Week)**\n\nThis is a fear of the unknown, the medical process, and seeing your wife in pain. It feels chaotic because it is outside of your control.\n\n**2. The Long-Term Stress: Having a Baby**\n\nThis is the fear of responsibility, sleepless nights, being a good father, and the complete restructuring of your life.\n\n### What is most helpful right now?\n\nSince the due date is literally next week, let\u2019s try to focus on just one anxiety at a time. Trying to tackle the next 18 years of parenting while also worrying about the hospital bag can be too much.\n\nTo help me support you better right now, which of these anxieties is feeling the most overwhelming in this very moment?\n\n*   **Is it the fear of the labor process itself (the hospital, the pain, the timing)?**\n*   **Or is it the overwhelming feeling of the massive responsibility that starts once she is home?**\n\nTell me what is sitting heaviest on your chest right now, and we can talk through it. You are doing great just by acknowledging these feelings."
+    }
+  ],
+  "model": "models/gemini-flash-latest",
+  "subreddit": null
+}

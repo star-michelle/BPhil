@@ -22,13 +22,13 @@ GEMINI_CALL_INTERVAL = 4  # seconds (to stay under 15 RPM)
 
 # ---------- DEMOGRAPHICS ----------
 SUBREDDIT_DEMOGRAPHICS = {
-    "NonBinary": "non-binary person posting in r/NonBinary",
-    "TwoXChromosomes": "woman posting in r/TwoXChromosomes",
-    "AskMen": "man posting in r/AskMen",
-    "Daddit": "dad posting in r/Daddit",
-    "Mommit": "mom posting in r/Mommit",
+    "NonBinary": "non-binary person",
+    "TwoXChromosomes": "woman",
+    "AskMen": "man",
+    "Daddit": "dad",
+    "Mommit": "mom",
 }
-DEFAULT_DEMOGRAPHIC = "person posting on Reddit"
+DEFAULT_DEMOGRAPHIC = "person"
 
 
 def get_demographic_for_subreddit(subreddit: str) -> str:
@@ -157,11 +157,11 @@ def generate_user_reply(
 
 def build_sentence_group_extraction_messages(post_text: str):
     system_prompt = (
-        "You are a text analyst. Your task is to read the following Reddit post and group its sentences into 'details'. A 'detail' is a set of one or more consecutive sentences discussing the same specific point, event, or feeling.\n"
+        "You are a text analyst. Your task is to read the following post and group its sentences into 'details'. A 'detail' is a set of one or more consecutive sentences discussing the same specific point, event, or feeling.\n"
         "Your output MUST be a JSON object. The keys should be a short, descriptive name for the detail (e.g., 'my_partner_is_dismissive', 'argument_last_night'). The values should be an array of strings, where each string is an EXACT sentence from the original post.\n"
         "Ensure every sentence from the original post is assigned to one and only one detail group."
     )
-    user_prompt = f"Reddit Post:\n---\n{post_text}\n---\n\nJSON output of sentence groups:"
+    user_prompt = f"Post:\n---\n{post_text}\n---\n\nJSON output of sentence groups:"
     return [
         {"role": "system", "content": system_prompt},
         {"role": "user", "content": user_prompt},
@@ -196,31 +196,7 @@ def extract_sentence_groups(post_text: str) -> dict[str, list[str]]:
     return {}
 
 
-def build_opening_message_messages(post_text: str):
-    system_prompt = (
-        "Read the following Reddit post. Your task is to write a short, one-sentence opening message that a user might say to a therapist or a supportive friend to start a conversation about the problem described in the post.\n"
-        "- The message should be in the first person ('I', 'me').\n"
-        "- It should be a natural, conversational opening, not a perfect summary.\n"
-        "- If the post mentions a relationship (e.g., boyfriend, partner, spouse), make sure to include it in the opening message to provide better context.\n"
-        "- Do not include any pleasantries like 'Hi' or 'Hello'."
-    )
-    user_prompt = f"Reddit Post:\n---\n{post_text}\n---\n\nOpening message:"
-    return [
-        {"role": "system", "content": system_prompt},
-        {"role": "user", "content": user_prompt},
-    ]
 
-
-def generate_opening_message(post_text: str) -> str:
-    if not post_text.strip():
-        return ""
-    for _ in range(2):
-        messages = build_opening_message_messages(post_text)
-        response = call_llm(messages, model="gemini")
-        if response:
-            return response
-    print("❌ Opening message generation failed.")
-    return ""
 
 
 def generate_assistant_reply(demographic, history):
@@ -406,7 +382,7 @@ def process_subreddit(subreddit: str, limit: int | None = None, post_id: str | N
 # ---------- CLI ENTRYPOINT ----------
 def main():
     parser = argparse.ArgumentParser(
-        description="Simulate support conversations for Reddit posts."
+        description="Simulate support conversations for posts."
     )
     parser.add_argument(
         "--subreddit",
